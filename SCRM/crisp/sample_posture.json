@@ -1,0 +1,409 @@
+
+p": 20,
+      "left": 460,
+      "nodeType": "Security Controls",
+      "properties": {
+        "title": "Operations Security",
+        "dataId": "3",
+        "name": "Operations Security",
+        "description": "Operations Security : DB Query authorization, Pseudonymization",
+        "class": "operatorClass3",
+        "inputs": {
+          "input_1": {
+            "label": "Input"
+          }
+        },
+        "outputs": {
+          "output_1": {
+            "label": "Output"
+          }
+        }
+      }
+    },
+    "3110": {
+      "top": 280,
+      "left": 500,
+      "nodeType": "Security Controls",
+      "properties": {
+        "title": "Operations Security",
+        "dataId": "3",
+        "name": "Operations Security",
+        "description": "Operations Security : DB Query authorization, Pseudonymization",
+        "class": "operatorClass3",
+        "inputs": {
+          "input_1": {
+            "label": "Input"
+          }
+        },
+        "outputs": {
+          "output_1": {
+            "label": "Output"
+          }
+        }
+      }
+    },
+    "20111": {
+      "top": 20,
+      "left": 700,
+      "nodeType": "Security Configurations",
+      "properties": {
+        "title": "Zero trust namespace",
+        "dataId": "20",
+        "name": "Zero trust namespace",
+        "description": "Zero trust namespace",
+        "class": "operatorClass20",
+        "inputs": {
+          "input_1": {
+            "label": "Input"
+          }
+        },
+        "outputs": {
+          "output_1": {
+            "label": "Output"
+          }
+        }
+      }
+    },
+    "21112": {
+      "top": 120,
+      "left": 700,
+      "nodeType": "Security Configurations",
+      "properties": {
+        "title": "Zero trust workload",
+        "dataId": "21",
+        "name": "Zero trust workload",
+        "description": "Zero trust workload",
+        "class": "operatorClass21",
+        "inputs": {
+          "input_1": {
+            "label": "Input"
+          }
+        },
+        "outputs": {
+          "output_1": {
+            "label": "Output"
+          }
+        }
+      }
+    },
+    "28114": {
+      "top": 340,
+      "left": 740,
+      "nodeType": "Security Configurations",
+      "properties": {
+        "title": "VPC Policy",
+        "dataId": "28",
+        "name": "VPC Policy",
+        "description": "VPC Policy",
+        "class": "operatorClass28",
+        "inputs": {
+          "input_1": {
+            "label": "Input"
+          }
+        },
+        "outputs": {
+          "output_1": {
+            "label": "Output"
+          }
+        }
+      }
+    },
+    "29113": {
+      "top": 240,
+      "left": 720,
+      "nodeType": "Security Configurations",
+      "properties": {
+        "title": "Security group Policy",
+        "dataId": "29",
+        "name": "Security group Policy",
+        "description": "Security group Policy",
+        "class": "operatorClass29",
+        "inputs": {
+          "input_1": {
+            "label": "Input"
+          }
+        },
+        "outputs": {
+          "output_1": {
+            "label": "Output"
+          }
+        }
+      }
+    },
+    "41105": {
+      "top": 60,
+      "left": 280,
+      "nodeType": "Assets",
+      "properties": {
+        "title": "AWS Infrastructure",
+        "dataId": "41",
+        "name": "AWS Infrastructure",
+        "description": "AWS Infrastructure",
+        "class": "operatorClass41",
+        "inputs": {
+          "input_1": {
+            "label": "Input"
+          }
+        },
+        "outputs": {
+          "output_1": {
+            "label": "Output"
+          }
+        }
+      }
+    },
+    "42115": {
+      "top": 380,
+      "left": 500,
+      "nodeType": "Auditors",
+      "properties": {
+        "title": "K8S.Falco",
+        "dataId": "42",
+        "name": "K8S.Falco",
+        "description": "Kubernetes Falco Auditor",
+        "class": "operatorClass42",
+        "inputs": {
+          "input_1": {
+            "label": "Input"
+          }
+        },
+        "outputs": {
+          "output_1": {
+            "label": "Output"
+          }
+        }
+      }
+    },
+    "44116": {
+      "top": 340,
+      "left": 260,
+      "nodeType": "Auditors",
+      "properties": {
+        "title": "AWS Audit",
+        "dataId": "44",
+        "name": "AWS Audit",
+        "description": "AWS Audit",
+        "class": "operatorClass44",
+        "inputs": {
+          "input_1": {
+            "label": "Input"
+          }
+        },
+        "outputs": {
+          "output_1": {
+            "label": "Output"
+          }
+        }
+      }
+    },
+    "59106": {
+      "top": 180,
+      "left": 280,
+      "nodeType": "Assets",
+      "properties": {
+        "title": "Aricent-Default",
+        "dataId": "59",
+        "name": "Aricent-Default",
+        "description": "Kubernetes Cluster",
+        "class": "operatorClass59",
+        "inputs": {
+          "input_1": {
+            "label": "Input"
+          }
+        },
+        "outputs": {
+          "output_1": {
+            "label": "Output"
+          }
+        }
+      }
+    },
+    "97107": {
+      "top": 100,
+      "left": 460,
+      "nodeType": "Security Controls",
+      "properties": {
+        "title": "Network Communications Security",
+        "dataId": "97",
+        "name": "Network Communications Security",
+        "description": "Network Communications Security : TLS, REstrict Wireless access, Firewall, ACLs",
+        "class": "operatorClass97",
+        "inputs": {
+          "input_1": {
+            "label": "Input"
+          }
+        },
+        "outputs": {
+          "output_1": {
+            "label": "Output"
+          }
+        }
+      }
+    },
+    "97109": {
+      "top": 180,
+      "left": 480,
+      "nodeType": "Security Controls",
+      "properties": {
+        "title": "Network Communications Security",
+        "dataId": "97",
+        "name": "Network Communications Security",
+        "description": "Network Communications Security : TLS, REstrict Wireless access, Firewall, ACLs",
+        "class": "operatorClass97",
+        "inputs": {
+          "input_1": {
+            "label": "Input"
+          }
+        },
+        "outputs": {
+          "output_1": {
+            "label": "Output"
+          }
+        }
+      }
+    },
+    "101103": {
+      "top": 140,
+      "left": 100,
+      "nodeType": "Compliance Requirements",
+      "properties": {
+        "title": "CIS AWS BM Compliance",
+        "dataId": "101",
+        "name": "CIS AWS BM Compliance",
+        "description": "CIS AWS BM Compliance",
+        "class": "operatorClass101",
+        "inputs": {
+          "input_1": {
+            "label": "Input"
+          }
+        },
+        "outputs": {
+          "output_1": {
+            "label": "Output"
+          }
+        }
+      }
+    },
+    "102104": {
+      "top": 240,
+      "left": 100,
+      "nodeType": "Compliance Requirements",
+      "properties": {
+        "title": "CIS Kubernetes BM Compliance",
+        "dataId": "102",
+        "name": "CIS Kubernetes BM Compliance",
+        "description": "CIS Kubernetes BM Compliance",
+        "class": "operatorClass102",
+        "inputs": {
+          "input_1": {
+            "label": "Input"
+          }
+        },
+        "outputs": {
+          "output_1": {
+            "label": "Output"
+          }
+        }
+      }
+    }
+  },
+  "links": {
+    "0": {
+      "fromOperator": "102104",
+      "fromConnector": "output_1",
+      "fromSubConnector": 0,
+      "toOperator": "59106",
+      "toConnector": "input_1",
+      "toSubConnector": 0
+    },
+    "1": {
+      "fromOperator": "101103",
+      "fromConnector": "output_1",
+      "fromSubConnector": 0,
+      "toOperator": "41105",
+      "toConnector": "input_1",
+      "toSubConnector": 0
+    },
+    "2": {
+      "fromOperator": "41105",
+      "fromConnector": "output_1",
+      "fromSubConnector": 0,
+      "toOperator": "97107",
+      "toConnector": "input_1",
+      "toSubConnector": 0
+    },
+    "3": {
+      "fromOperator": "59106",
+      "fromConnector": "output_1",
+      "fromSubConnector": 0,
+      "toOperator": "97109",
+      "toConnector": "input_1",
+      "toSubConnector": 0
+    },
+    "4": {
+      "fromOperator": "41105",
+      "fromConnector": "output_1",
+      "fromSubConnector": 0,
+      "toOperator": "3108",
+      "toConnector": "input_1",
+      "toSubConnector": 0
+    },
+    "5": {
+      "fromOperator": "59106",
+      "fromConnector": "output_1",
+      "fromSubConnector": 0,
+      "toOperator": "3110",
+      "toConnector": "input_1",
+      "toSubConnector": 0
+    },
+    "6": {
+      "fromOperator": "97107",
+      "fromConnector": "output_1",
+      "fromSubConnector": 0,
+      "toOperator": "20111",
+      "toConnector": "input_1",
+      "toSubConnector": 0
+    },
+    "7": {
+      "fromOperator": "97107",
+      "fromConnector": "output_1",
+      "fromSubConnector": 0,
+      "toOperator": "21112",
+      "toConnector": "input_1",
+      "toSubConnector": 0
+    },
+    "8": {
+      "fromOperator": "97109",
+      "fromConnector": "output_1",
+      "fromSubConnector": 0,
+      "toOperator": "29113",
+      "toConnector": "input_1",
+      "toSubConnector": 0
+    },
+    "9": {
+      "fromOperator": "97109",
+      "fromConnector": "output_1",
+      "fromSubConnector": 0,
+      "toOperator": "28114",
+      "toConnector": "input_1",
+      "toSubConnector": 0
+    },
+    "10": {
+      "fromOperator": "41105",
+      "fromConnector": "output_1",
+      "fromSubConnector": 0,
+      "toOperator": "44116",
+      "toConnector": "input_1",
+      "toSubConnector": 0
+    },
+    "11": {
+      "fromOperator": "59106",
+      "fromConnector": "output_1",
+      "fromSubConnector": 0,
+      "toOperator": "42115",
+      "toConnector": "input_1",
+      "toSubConnector": 0
+    }
+  },
+  "operatorTypes": {}
+}

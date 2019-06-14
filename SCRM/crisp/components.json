@@ -1,0 +1,182 @@
+[
+  {
+    "id": "node_1",
+    "parent": "topLevel",
+    "text": "Compliance Requirement",
+    "type": "level1",
+    "sequence" : 1
+  },
+  {
+    "id": "node_2",
+    "parent": "topLevel",
+    "text": "Asset Group",
+    "type": "level1",
+    "sequence" : 2
+  },
+  {
+    "id": "node_3",
+    "parent": "topLevel",
+    "text": "Assets",
+    "type": "level1",
+    "sequence" : 3
+  },
+  {
+    "id": "node_4",
+    "parent": "topLevel",
+    "text": "Security Controls",
+    "type": "level1",
+    "sequence" : 4
+  },
+  {
+    "id": "node_5",
+    "parent": "topLevel",
+    "text": "Security Configurations",
+    "type": "level1",
+    "state": {
+      "disabled": "true"
+    },
+    "sequence" : 6
+  },
+  {
+    "id": "node_6",
+    "parent": "topLevel",
+    "text": "Auditors",
+    "type": "level1",
+    "sequence" : 5
+  },
+  {
+    "id": "node_1.1",
+    "parent": "node_1",
+    "text": "GDPR Compliance",
+    "description": "GDPR Compliance",
+    "nodeType": "Compliance Req",
+    "type": "level2"
+  },
+  {
+    "id": "node_1.2",
+    "parent": "node_1",
+    "text": "CIS AWS BM Compliance",
+    "description": "CIS AWS BM Compliance",
+    "nodeType": "Compliance Req",
+    "type": "level2"
+  },
+  {
+    "id": "node_1.3",
+    "parent": "node_1",
+    "text": "CIS Kubernetes BM Compliance",
+    "description": "CIS Kubernetes BM Compliance",
+    "nodeType": "Compliance Req",
+    "type": "level2"
+  },
+  {
+    "id": "node_2.1",
+    "parent": "node_2",
+    "text": "AWS Infrastructure",
+    "description": "AWS Infrastructure",
+    "nodeType": "Asset Group",
+    "type": "level2"
+  },
+  {
+    "id": "node_2.2",
+    "parent": "node_2",
+    "text": "Kubernetes Infrastructure",
+    "description": "Kubernetes Infrastructure",
+    "nodeType": "Asset Group",
+    "type": "level2"
+  },
+
+  {
+    "id": "node_3.1",
+    "parent": "node_3",
+    "text": "AWS SDWAN Controller",
+    "description": "AWS SDWAN Controller",
+    "nodeType": "Assets",
+    "type": "level2"
+  },
+  {
+    "id": "node_3.2",
+    "parent": "node_3",
+    "text": "K8s SDWAN Controller",
+    "description": "K8s SDWAN Controller",
+    "nodeType": "Assets",
+    "type": "level2"
+  },
+  {
+    "id": "node_3.3",
+    "parent": "node_3",
+    "text": "K8s SDWAN Branch",
+    "description": "K8s SDWAN Branch",
+    "nodeType": "Assets",
+    "type": "level2"
+  },
+  {
+    "id": "node_3.4",
+    "parent": "node_3",
+    "text": "AWS S3 Storage",
+    "description": "AWS S3 Storage",
+    "nodeType": "Assets",
+    "type": "level2"
+  },
+  {
+    "id": "node_4.1",
+    "parent": "node_4",
+    "text": "Network Communications Security",
+    "description": "Network Communications Security",
+    "nodeType": "Security Control",
+    "type": "level2"
+  },
+  {
+    "id": "node_4.2",
+    "parent": "node_4",
+    "text": "Behavioral Security",
+    "description": "Behavioral Security",
+    "nodeType": "Security Control",
+    "type": "level2"
+  },
+  {
+    "id": "node_6.1",
+    "parent": "node_6",
+    "text": "SDWANBranchSysCalls",
+    "description": "SDWAN-Branch-SysCalls",
+    "nodeType": "Auditor",
+    "type": "level2"
+  },
+  {
+    "id": "node_6.2",
+    "parent": "node_6",
+    "text": "SDWANControllerSysCalls",
+    "description": "SDWAN-Controller-SysCalls",
+    "nodeType": "Auditor",
+    "type": "level2"
+  },
+  {
+    "id": "node_6.3",
+    "parent": "node_6",
+    "text": "NETAppsNetwork",
+    "description": "NETAppsNetwork",
+    "nodeType": "Auditor",
+    "type": "level2"
+  },
+  {
+    "id": "node_6.4",
+    "parent": "node_6",
+    "text": "NETAppsS3",
+    "description": "NET Apps - S3",
+    "nodeType": "Auditor",
+    "type": "level2"
+  },
+  {
+    "id": "node_6.5",
+    "parent": "node_6",
+    "text": "K8sCISBenchMarks",
+    "description": "K8sCISBenchMarks",
+    "nodeType": "Auditor",
+    "type": "level2"
+  },
+  {
+    "id": "topLevel",
+    "parent": "#",
+    "text": "All Categories",
+    "type": "root"
+  }
+]

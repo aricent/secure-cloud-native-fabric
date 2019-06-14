@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SCF - Login </title>
+
+	<link href="../static/third_party/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../static/third_party/node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"
+	/>
+	<link href="../static/scf_static/css/custom.min.css" rel="stylesheet">
+	<link href="../static/scf_static/css/login.css" rel="stylesheet">
+</head>
+
+<body class="login">
+	<div class="login_wrapper">
+		<div class="animate form login_form">
+			<!-- <i class="fas fa-user-circle userIcon"></i> -->
+			<!-- <span> -->
+				<img class="logoImg" src="../static/scf_static/images/logo/logo_blue.png">
+			<!-- </span> -->
+			<section class="login_content">
+				<form action="/index/" id="loginForm">
+					<h1>Sign In</h1>
+					<div class="form-group row">
+						<div class="col-12">
+							<div class="input-group">
+								<span class="input-group-addon">
+									<i class="far fa-envelope"></i>
+								</span>
+								<input type="email" class="form-control" placeholder="Email" required="" id="email" />
+							</div>
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-12">
+							<div class="input-group">
+								<span class="input-group-addon">
+									<i class="fas fa-lock"></i>
+								</span>
+								<input type="password" class="form-control" placeholder="Password" required="" id="password" />
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="text-left">
+							<input type="checkbox" id="checkbox-signup" />
+							<label for="checkbox-signup">
+								Remember me
+							</label>
+						</div>
+						<button type="submit" class="btn btn-lg submit">Submit</button>
+					</div>
+					<div class="separator">
+						<div class="clearfix"></div>
+						<br>
+						<div>
+							<!-- <h1>
+								<i class="fab fa-hubspot" style="font-size:35px;"></i> Aricent - SCF</h1> -->
+							<!-- <span>
+									<img class="logoImg" src="../static/scf_static/images/logo/C2-3.png" width="60px" height="50px">
+								</span> -->
+							<span>Altran - Secure Cloud-native Fabric </span>
+						</div>
+					</div>
+				</form>
+			</section>
+		</div>
+	</div>
+</body>
+
+<script src="../static/third_party/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../static/third_party/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../static/scf_static/js/login.js"></script>
+
+</html>

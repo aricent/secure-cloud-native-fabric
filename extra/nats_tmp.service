@@ -1,0 +1,10 @@
+[Unit]
+Description=NATS messaging server
+
+[Service]
+ExecStart=/srv/nats/bin/gnatsd -c /srv/nats/gnatsd.config
+User=root
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

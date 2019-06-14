@@ -1,0 +1,49 @@
+.navPanel {
+    text-align: center;
+}
+
+.panelBox.active {
+    background-color: #26B99A;
+    color: white;
+    font-weight: bolder;
+}
+
+#cloudType {
+    display: inline-block;
+    width: 85%;
+}
+
+.innerSelectDiv>.form-control {
+    width: 50%;
+    display: inline-block;
+}
+
+.innerSelectDiv {
+    padding: 0px 10%;
+}
+
+.panelBox {
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    height: 50px;
+    background-color: #ccc;
+    padding: 2px 0px;
+    border-radius: 50%;
+    color: black;
+    position: relative;
+    cursor: pointer;
+}
+
+.panelText {
+    top: 15px;
+    font-size: 15px;
+    position: relative;
+}
+
+.arrow_img {
+    position: relative;
+    top: 15px;
+    height: 30px;
+    width: 85px;
+}

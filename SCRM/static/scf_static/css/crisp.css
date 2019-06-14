@@ -1,0 +1,32 @@
+div.tooltip {
+    position: absolute;
+    text-align: left;
+    width: auto;
+    height: auto;
+    padding: 8px;
+    font: 12px sans-serif;
+    background: #0a2538;
+    border: #0a2538 1px solid;
+    border-radius: 0px;
+    pointer-events: none;
+    color: white;
+}
+
+.slice {
+    cursor: pointer;
+}
+
+.slice .main-arc {
+    stroke: #fff;
+    stroke-width: 1px;
+}
+
+.slice .hidden-arc {
+    fill: none;
+}
+
+.slice text {
+    pointer-events: none;
+    dominant-baseline: middle;
+    text-anchor: middle;
+}

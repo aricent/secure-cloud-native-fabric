@@ -1,0 +1,135 @@
+<div id="loader-wrapper" ng-show="showLoader">
+	<div class="loader"></div>
+</div>
+<div ng-show="!showLoader">
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="x_panel">
+				<div class="x_title">
+					<h2>Risk Score Trend</h2>
+					<!-- <ul class="nav navbar-right panel_toolbox">
+						<li>
+							<a class="collapse-link">
+								<i class="fa fa-chevron-up"></i>
+							</a>
+						</li>
+					</ul> -->
+					<div class="clearfix"></div>
+				</div>
+				<div class="x_content">
+					<div class="row">
+						<div class="col-md-6 col-sm-12 col-xs-12">
+							<h5 style="margin:0" class="text-center">Compliance</h5>
+							<div class="chart-container" style="position: relative; height:30vh;">
+								<canvas id="lineChart" height="150"></canvas>
+							</div>
+
+						</div>
+						<div class="col-md-6 col-sm-12 col-xs-12">
+							<h5 style="margin:0" class="text-center">Container Cluster</h5>
+							<div class="chart-container" style="position: relative; height:30vh;">
+								<canvas id="lineChart1" height="150"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-sm-6 col-xs-12">
+			<div class="x_panel">
+				<div class="x_title">
+					<h2>Current Risk Score</h2>
+					<!-- <ul class="nav navbar-right panel_toolbox">
+						<li>
+							<a class="collapse-link">
+								<i class="fa fa-chevron-up"></i>
+							</a>
+						</li>
+					</ul> -->
+					<div class="clearfix"></div>
+				</div>
+				<div class="x_content">
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<canvas id="foo" style="width: 100%;"></canvas>
+							<h5 style="margin:0" class="text-center">Compliance</h5>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<canvas id="foo1" style="width: 100%;"></canvas>
+							<h5 style="margin:0" class="text-center">Container Cluster</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 col-sm-6 col-xs-12">
+			<div class="x_panel">
+				<div class="x_title">
+					<h2>Security Monitoring</h2>
+					<!-- <ul class="nav navbar-right panel_toolbox">
+						<li>
+							<a class="collapse-link">
+								<i class="fa fa-chevron-up"></i>
+							</a>
+						</li>
+					</ul> -->
+					<div class="clearfix"></div>
+				</div>
+				<div class="x_content">
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<canvas id="oilChart" width="70" height="31"></canvas>
+							<h5 style="margin:10px 0px;" class="text-center">Events 24 Hours</h5>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<canvas id="oilChartEve" width="70" height="31"></canvas>
+							<h5 style="margin:10px 0px;" class="text-center">Compliance Impacting Policy Events</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="x_panel">
+				<div class="x_title">
+					<h2>E-V-A Mapping of Compliance – Assets - Security Configuration</h2>
+					<!-- <ul class="nav navbar-right panel_toolbox">
+						<li>
+							<a class="collapse-link">
+								<i class="fa fa-chevron-up"></i>
+							</a>
+						</li>
+					</ul> -->
+					<div class="clearfix"></div>
+				</div>
+				<div class="x_content">
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<label class="">Posture List</label>
+							<select class="form-control evaListPosture postureList"></select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="evaMap"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="../static/third_party/node_modules/chart.js/dist/Chart.min.js"></script>
+<!-- <script src="/static/scf_static/js/jquery.chartjs.init.js"></script> -->
+<script src="../static/scf_static/js/gauge.min.js"></script>
+<script src="../static/scf_static/js/evaMapping.js"></script>
+<script src="../static/scf_static/js/commonEvaGraph.js"></script>
+<style>
+	.postureList {
+		display: inline-block;
+		width: 35%;
+	}
+</style>

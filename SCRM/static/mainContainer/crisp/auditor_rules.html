@@ -1,0 +1,203 @@
+<div id="loader-wrapper" ng-show="showLoader">
+	<div class="loader"></div>
+</div>
+<div ng-show="!showLoader">
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="x_panel neoDivCard">
+				<div class="x_title">
+					<h2 class="cardHeader">Select Goals Baseline</h2>
+					<select class="postureList crispAuditGraph form-control"></select>
+					<div class="clearfix"></div>
+				</div>
+				<div class="x_content">
+					<div class='row'>
+						<div class="col-lg-12">
+							<div id="neo4jd3" data-graph='auditNeo'></div>
+						</div>
+					</div>
+					<div class="row rowBottom">
+						<div class="col-md-12">
+							<div id="rcorners2" style="margin-top:15px;">
+								<div class="row">
+									<ul class="list-inline labelsList">
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="x_panel auditorCardDiv">
+				<div class="x_title">
+					<h2>Configured Auditors</h2>
+					<div class="clearfix"></div>
+				</div>
+				<div class="x_content">
+					<div class="table-responsive">
+						<table id="auditorTable" class="table table-condensed"></table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="auditorModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+	<div class="modal-dialog modal-lg">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Add Custom Auditor Instance</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="form-group">
+							<label class="selectLabel">Auditor</label>
+							<input name="auditType" class="form-control" type="text" id="auditType" readonly="true" />
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="form-group">
+							<label class="selectLabel">Available Rule-sets</label>
+							<select name="auditorList" class="form-control" id="auditorList">
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="contentSourceDiv">
+					<div class="src">
+						<a href="#" id="permalink" style="display:none;">permalink</a>
+						<textarea id="sourceAudit"></textarea>
+					</div>
+					<div class="dst">
+						<!-- <h6>Error Message</h6> -->
+						<div id="resultAudit"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="form-group">
+							<label class="selectLabel" style="position:relative;bottom: 35px;">Map to Clusters</label>
+							<select name="clusterList" class="form-control" id="clusterList" multiple>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default btn-success" data-dismiss="modal" id="createAuditor">Apply</button>
+				<button type="submit" class="btn btn-default btn-danger" data-dismiss="modal">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="auditorModalView" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+ data-backdrop="static">
+	<div class="modal-dialog modal-lg">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">View Auditors</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="form-group">
+							<label class="selectLabel">Auditor</label>
+							<input name="viewAuditType" class="form-control viewAuditType" type="text" readonly="true" />
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="form-group">
+							<label class="selectLabel">Rule-Set</label>
+							<input name="viewAuditName" class="form-control viewAuditName" type="text" readonly="true" />
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="form-group">
+							<label class="selectLabel">Cluster</label>
+							<input name="clusterName" class="form-control clusterName" type="text" readonly="true" />
+						</div>
+					</div>
+				</div>
+				<div class="contentSourceDiv">
+					<div class="src">
+						<a href="#" id="permalink" style="display:none;">permalink</a>
+						<textarea id="sourceAuditView"></textarea>
+					</div>
+					<div class="dst">
+						<!-- <h6>Error Message</h6> -->
+						<div id="resultAuditView"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="auditorReportModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+ data-backdrop="static">
+	<div class="modal-dialog modal-lg">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Auditor Report(s)</h4>
+				<button type="button" class="btn btn-default btn-primary printReport" data-dismiss="modal" onclick=window.print();>Print</button>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-lg-6">
+						<label style="font-weight:bold;">Done on Cluster : </label>
+						<span class="clusterName"></span>
+					</div>
+					<div class="col-lg-6">
+						<label style="font-weight:bold;">Auditor : </label>
+						<span class="auditorName"></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<label style="font-weight:bold;">TimeStamp : </label>
+						<span class="timestampSpan"></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="reportFind">Report Findings</div>
+						<div class="reportList"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="/static/scf_static/js/footable.js"></script>
+<script src="/static/scf_static/js/context.js"></script>
+<!-- <script src="/static/scf_static/js/socialGraphInit.js"></script> -->
+<script src="/static/third_party/node_modules/neo4jd3/docs/js/d3.min.js"></script>
+<script src="/static/scf_static/js/neo4jd3.js?v=0.0.1"></script>
+<script src="/static/scf_static/js/auditorRules.js"></script>
+<script src="/static/scf_static/js/neoInit.js"></script>
+<script src="https://cdn.jsdelivr.net/es5.shim/4.4.1/es5-shim.min.js"></script>
+<script src="/static/scf_static/js/js-yaml-master/lib/js-yaml.js"></script>
+<script src="/static/scf_static/js/commonEvaGraph.js"></script>
+
+<link href="/static/scf_static/css/context.standalone.css" rel="stylesheet" type="text/css" />
+<link href="/static/third_party/node_modules/neo4jd3/docs/css/neo4jd3.min.css" rel="stylesheet" type="text/css" />
+<!-- <link href="/static/assets/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" /> -->
+<link href="/static/scf_static/css/nodeGraph.css" rel="stylesheet" type="text/css" />
+<link href="/static/scf_static/css/codemirror.css" rel="stylesheet" type="text/css" />
+<link href="/static/scf_static/css/demo.css" rel="stylesheet" type="text/css" />
+<!-- <link href="/static/assets/plugins/footable/css/footable.core.css" rel="stylesheet" type="text/css" /> -->
+<link href="/static/scf_static/css/auditorRules.css" rel="stylesheet" type="text/css" />

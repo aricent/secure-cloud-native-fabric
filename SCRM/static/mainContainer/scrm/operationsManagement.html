@@ -1,0 +1,178 @@
+<div id="loader-wrapper" ng-show="showLoader">
+  <div class="loader"></div>
+</div>
+
+<div ng-show="!showLoader">
+  <div class="row headStart">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" data-href="headingOne">
+      <span class="headTxt active">SCRM Social Graph</span>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" data-href="headingTwo">
+      <span class="headTxt">Region Wise Container Cluster List</span>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" data-href="headingThree">
+      <span class="headTxt">Alarms And Events</span>
+    </div>
+  </div>
+  <div class="row headingOne nodeDiv">
+    <div class="col-lg-12">
+      <div class="x_panel neoDivCard">
+        <div class="x_title">
+          <img title="Fullscreen" class="fullSrnBtn" height="25px" width="25px" src="/static/scf_static/images/window_fullscreen_1-512.png">
+          <img title="Contract" class="smallSrnBtn" height="30px" width="40px" src="/static/scf_static/images/minimize-maximize-buttons-icons_210978.jpg">
+          <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+          <div class="row rowClass">
+            <div class="col-md-9">
+              <div class="form-inline nodeFilters">
+                <div class="form-group">
+                  <label class="selectLabel">Cloud Type</label>
+                  <select class="form-control cloudSel">
+                    <option value="KUBERNETES" selected>Kubernetes</option>
+                    <option value="AWS">AWS</option>
+                    <option value="Both">Both</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="selectLabel">View</label>
+                  <select class="form-control nodeType">
+                    <option value=""></option>
+                    <option value="0">Infrastructure</option>
+                    <option value="1">Roles</option>
+                    <option value="2">Alarms</option>
+                  </select>
+                </div>
+                <button class="btn btn-primary appFilters" type="button" style="margin: 0px;"> Apply </button>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="refreshSlider">
+                <div class="timerDiv">
+                  <span class="refTab">Graph Refresh</span>
+                  <label>
+                    <span class="timeCounterSpan">20 sec</span>
+                    <div class="sliderDiv">
+                      <label class="switch">
+                        <input type="checkbox" class="sliderCheckbox">
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="neo4jd3"></div>
+          <div class="row rowBottom">
+            <div class="col-md-8">
+              <div id="rcorners2" style="margin-top:15px;">
+                <ul class="list-inline labelsList">
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div style="text-align:right;margin-top:15px;">
+                <div class="token token-label" style="background-color: rgb(165, 171, 182);color: rgb(255, 255, 255);">Critical
+                  <img src="/static/scf_static/images/emergency.svg" width="20px" height="20px" />
+                </div>
+                <div class="token token-label" style="background-color: rgb(165, 171, 182);color: rgb(255, 255, 255);">Emergency
+                  <img src="/static/scf_static/images/danger.png" width="20px" height="20px" />
+                </div>
+                <div class="token token-label" style="background-color: rgb(165, 171, 182); color: rgb(255, 255, 255);">Warning
+                  <img src="/static/scf_static/images/warn.png" width="20px" height="20px" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row headingTwo nodeDiv" style="margin-bottom: 20px;">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="x_panel" id="collapseTwo">
+        <div class="x_content">
+          <div id="vmap" style="width: 100%; height: 500px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row headingThree nodeDiv" style="margin-bottom: 20px;">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="x_panel" id="collapseThree">
+        <div class="x_content">
+          <!-- <div class="" role="tabpanel"> -->
+          <ul class="nav nav-tabs bar_tabs" role="tabpanel" id="myTab">
+            <li role="presentation" class="active">
+              <a data-toggle="tab" data-target="#home">Alarms</a>
+            </li>
+            <li role="presentation">
+              <a data-target="#menudiv" data-toggle="tab">Events</a>
+            </li>
+          </ul>
+          <!-- </div> -->
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="tab-content">
+              <div id="home" class="tab-pane fade in active">
+                <div class="table-responsive">
+                  <table class="table table-hover table-bordered" id="alarmTable">
+                    <thead class="thead-light">
+                      <tr>
+                        <th>#</th>
+                        <th>Cloud Type</th>
+                        <th>Resource Type</th>
+                        <th>Resource-ID</th>
+                        <th>Event Description</th>
+                        <th>Criticality</th>
+                      </tr>
+                      <tbody>
+                      </tbody>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+              <div id="menudiv" class="tab-pane fade">
+                <div class="table-responsive">
+                  <table class="table table-hover" id="eventTable">
+                    <thead class="thead-light">
+                      <tr>
+                        <th>#</th>
+                        <th>Events Type</th>
+                        <th>Resource Type</th>
+                        <th>Resource-ID</th>
+                        <th>Event Description</th>
+                        <th>Criticality</th>
+                      </tr>
+                      <tbody>
+                        <tr>
+                          <td colspan="2">No Events found</td>
+                        </tr>
+                      </tbody>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<link href="../static/scf_static/css/context.standalone.css" rel="stylesheet" type="text/css" />
+<link href="../static/third_party/node_modules/neo4jd3/docs/css/neo4jd3.min.css" rel="stylesheet" type="text/css" />
+<link href="../static/third_party/node_modules/jqvmap/dist/jqvmap.css" media="screen" rel="stylesheet" type="text/css">
+<link href="/static/scf_static/css/nodeGraph.css" rel="stylesheet" type="text/css" />
+
+<script src="../static/scf_static/js/context.js"></script>
+<!-- <script src="../static/scf_static/js/socialGraphInit.js"></script> -->
+<script src="../static/third_party/node_modules/neo4jd3/docs/js/d3.min.js"></script>
+<script src="../static/scf_static/js/neo4jd3.js?v=0.0.1"></script>
+<script src="../static/scf_static/js/neoInit.js"></script>
+<script type="text/javascript" src="../static/third_party/node_modules/jqvmap/dist/jquery.vmap.js"></script>
+<script type="text/javascript" src="../static/third_party/node_modules/jqvmap/dist/maps/jquery.vmap.world.js" charset="utf-8"></script>
+<script src="../static/scf_static/js/scrm.js"></script>
+<!-- <script src="/static/scf_static/js/jvectormap.init.js"></script> -->
+<!-- <link href="/static/assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" type="text/css" /> -->

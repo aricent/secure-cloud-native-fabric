@@ -1,0 +1,13 @@
+|action=ADDED| |region=ip-10-0-0-26| |resource=default| |name="webserver2-56ff445c89-7zvck"|
+|action=ADDED| |region=ip-10-0-0-26| |resource=default| |name="webserver-54848c775f-hrc8j"|
+|action=ADDED| |region=ip-10-0-0-26| |resource=default| |name="webserver-54848c775f-54gpz"|
+|action=ADDED| |region=ip-10-0-0-26| |resource=default| |name="webserver-54848c775f-ddcdr"|
+|action=MODIFIED| |region=ip-10-0-0-26| |resource=default| |name="webserver-54848c775f-54gpz"|
+|action=ADDED| |region=None| |resource=default| |name="webserver-54848c775f-kbb55"|
+|action=MODIFIED| |region=ip-10-0-0-26| |resource=default| |name="webserver-54848c775f-kbb55"|
+|action=MODIFIED| |region=ip-10-0-0-26| |resource=default| |name="webserver-54848c775f-kbb55"|
+|action=MODIFIED| |region=ip-10-0-0-26| |resource=default| |name="webserver-54848c775f-54gpz"|
+|action=MODIFIED| |region=ip-10-0-0-26| |resource=default| |name="webserver-54848c775f-54gpz"|
+|action=DELETED| |region=ip-10-0-0-26| |resource=default| |name="webserver-54848c775f-54gpz"|
+|action=MODIFIED| |region=ip-10-0-0-26| |resource=default| |name="webserver-54848c775f-kbb55"|
+

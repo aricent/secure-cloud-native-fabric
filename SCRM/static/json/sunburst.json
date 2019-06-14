@@ -1,0 +1,92 @@
+{
+    "name": "Risk Profile",
+    "color": "#d8c51d",
+    "score": "700",
+    "children": [
+        {
+            "name": "Risk Score",
+            "color": "#16c1d3",
+            "score": 350,
+            "children": [
+                {
+                    "name": "AWS Infrastructure",
+                    "color": "#81c9cc",
+                    "score": 150,
+                    "children": [
+                        {
+                            "name": "Network Communication Security",
+                            "color": "#a4f2da",
+                            "score": 100,
+                            "children": [
+                                {
+                                    "name": "NetAppsNetwork",
+                                    "size": 100,
+                                    "score": 100,
+                                    "color": "#79b5b5"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Behavioral Security",
+                            "color": "#6bd6d6",
+                            "score": 50,
+                            "children": [
+                                {
+                                    "name": "NetAppsS3",
+                                    "size": 50,
+                                    "score": 50,
+                                    "color": "#1ead5e"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Kubernetes Infrastructure",
+                    "color": "#c95b55",
+                    "score": 200,
+                    "children": [
+                        {
+                            "name": "Network Communication Security",
+                            "color": "#ffae90",
+                            "score": 200,
+                            "children": [
+                                {
+                                    "name": "NetAppsNetwork",
+                                    "size": 200,
+                                    "score": 200,
+                                    "color": "#dd7812"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Alarms",
+            "color": "#7f7975",
+            "score": 350,
+            "children": [
+                {
+                    "name": "Minor",
+                    "size": 150,
+                    "score": 150,
+                    "color": "#bab1ab"
+                },
+                {
+                    "name": "Critical",
+                    "size": 50,
+                    "score": 50,
+                    "color": "#a3948d"
+                },
+                {
+                    "name": "Emergency",
+                    "size": 150,
+                    "score": 150,
+                    "color": "#ada18e"
+                }
+            ]
+        }
+    ]
+}

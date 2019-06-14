@@ -1,0 +1,9 @@
+{
+  "production": false,
+  "manageInventoryUrl": "http://172.19.60.189:8000",
+  "defectManagementUrl": "http://172.19.60.180/bugzilla/",
+  "testSuiteUrl": "http://172.19.60.180:8080/",
+  "sourceRepo": "http://172.19.60.180/svn/tantem_repo/",
+  "domain_name": "http://172.19.60.228:8080",
+  "aiml_domain": "http://172.19.60.192:8080"
+}

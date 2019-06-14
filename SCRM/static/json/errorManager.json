@@ -1,0 +1,90 @@
+$(function() {
+  //setup ajax error handling
+  $.ajaxSetup({
+    error: function(x, status, error) {
+      // Bug 23414 start
+      handleError(x, status, error);
+      // Bug 23414 end
+    }
+  });
+});
+
+// Bug 23414 start
+function handleError(x, status, error) {
+  console.log(x);
+  console.log(status);
+  console.log(error);
+  var errorTitle = "Error!";
+  var errorIcon = "error";
+  var warningMessage = "Warning!";
+  var warningIcon = "warning";
+  if (x.status == 401) {
+    //Bug 23429 -Start
+    swal(
+      {
+        title: warningMessage,
+        text: "Session has expired. Please login again to continue.",
+        type: warningIcon,
+        showCancelButton: false,
+        confirmButtonClass: "btn-warning",
+        confirmButtonText: "OK",
+        closeOnConfirm: true
+      },
+      function() {
+        // Bug 23414  - Start
+        top.location.href = "/login.html";
+        // Bug 23414  - End
+      }
+    );
+  } else if (x.status == 403 || x.status == 404) {
+    if (x.hasOwnProperty("responseJSON")) {
+      swal(warningMessage, x.responseJSON.detail, warningIcon);
+    } else {
+      swal(warningMessage, x.statusText, warningIcon);
+    }
+  } else if (x.status == 412) {
+    swal(warningMessage, x.responseJSON.status, warningIcon);
+  } else if (x.status == 503) {
+    swal(
+      warningMessage,
+      "Service Unavailable. Please try after sometime.",
+      warningIcon
+    );
+  } else if (x.status == 500) {
+    swal(warningMessage, x.responseJSON.error, warningIcon);
+  } else if (x.status == 400) {
+    var msg = "";
+    if (x.responseJSON) {
+      if (x.responseJSON.hasOwnProperty("Error")) {
+        if (x.responseJSON.Error.hasOwnProperty("error")) {
+          swal(warningMessage, x.responseJSON.Error.error, warningIcon);
+        } else if (x.responseJSON.Error.hasOwnProperty("errors")) {
+          swal(warningMessage, x.responseJSON.Error.errors[0], warningIcon);
+        } else {
+          swal(warningMessage, x.responseJSON.Error, warningIcon);
+        }
+      } else if (x.responseJSON.hasOwnProperty("non_field_errors")) {
+        swal(warningMessage, x.responseJSON.non_field_errors[0], warningIcon);
+      } else if (x.responseJSON.hasOwnProperty("username")) {
+        swal(warningMessage, x.responseJSON.username[0], warningIcon);
+      } else if (x.responseJSON.hasOwnProperty("name")) {
+        swal(warningMessage, x.responseJSON.name[0], warningIcon);
+      } else if (x.responseJSON.hasOwnProperty("cat_name")) {
+        swal(warningMessage, x.responseJSON.cat_name[0], warningIcon);
+      } else if (x.responseJSON.hasOwnProperty("component_name")) {
+        swal(warningMessage, x.responseJSON.component_name[0], warningIcon);
+      } else {
+        for (var key in x.responseJSON) {
+          if (key == "0") {
+            msg = x.responseJSON[key];
+          } else {
+            msg = key + ": " + x.responseJSON[key][0] + "\n";
+          }
+        }
+        swal(warningMessage, msg, warningIcon);
+      }
+    }
+  }
+}
+
+// Bug 23414 end

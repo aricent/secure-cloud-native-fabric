@@ -1,0 +1,43 @@
+.login_form {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+.userIcon {
+    font-size: 100px;
+    position: absolute;
+    top: -48px;
+    margin: 0px 30%;
+    color: #2A3F54;
+}
+
+.login_content h1:after,
+.login_content h1:before {
+    width: 33%;
+}
+
+.submit {
+    background: #2A3F54;
+    width: 100%;
+    color: #ffffff;
+}
+
+.btn.submit.focus,
+.btn.submit:focus,
+.btn.submit:hover {
+    color: #ffffff;
+}
+
+.login_content form input {
+    margin: 0px !important;
+}
+
+.logoImg {
+    width: 160px;
+    height: 170px;
+    position: absolute;
+    top: -72px;
+    left: 90px;
+}

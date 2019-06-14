@@ -1,0 +1,3 @@
+2018-01-08 11:14:01,348 - sample_alerter - INFO - |action="Item changed"| |resource=securitygroup| |account=SM_for_AWS| |region=us-east-2| |name="SG2 (sg-7a331612 in vpc-0f31d867)"|
+2018-01-08 11:14:01,385 - sample_alerter - INFO - |action="Issue created"| |id=147| |resource=securitygroup| |account=SM_for_AWS| |region=us-east-2| |name="SG2 (sg-7a331612 in vpc-0f31d867)"| |issue="Internet Accessible" Notes=Entity: [cidr:0.0.0.0/0] Access: [egress:tcp:443]|
+2018-01-08 11:14:01,386 - sample_alerter - INFO - |action="Issue created"| |id=148| |resource=securitygroup| |account=SM_for_AWS| |region=us-east-2| |name="SG2 (sg-7a331612 in vpc-0f31d867)"| |issue="Unknown Access" Notes=Entity: [cidr:165.225.104.84/32] Access: [egress:tcp:22]|

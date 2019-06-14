@@ -1,0 +1,326 @@
+<div id="loader-wrapper" ng-show="showLoader">
+	<div class="loader"></div>
+</div>
+
+<div ng-show="!showLoader">
+	<div class="row headStart">
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" data-href="headingOne">
+			<span class="headTxt active">Security Config Templates </span>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" data-href="headingTwo">
+			<span class="headTxt">Security Configs</span>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" data-href="headingThree">
+			<span class="headTxt">Security Config Graph</span>
+		</div>
+	</div>
+
+	<div class="headingOne row nodeDiv">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="x_panel">
+				<div class="x_title">
+					<button class="btn addSGTemp btn-primary" type="button" data-toggle="modal" data-target="#sgTempActions">Add</button>
+					<button class="btn editSGTemp btn-primary" type="button">Edit</button>
+					<button class="btn deleteSGTemp btn-primary" type="button">Delete</button>
+					<div class="clearfix"></div>
+				</div>
+				<div class="x_content">
+					<div class="table-responsive">
+						<table id="policyTempTable" class="table-hover table" style="width:100%">
+							<thead>
+								<tr>
+									<th>Cloud Type</th>
+									<th>Template Name</th>
+									<th>Description</th>
+									<th>Derived Objects</th>
+									<th>Defined in Postures</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="7">No records found</td>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="headingTwo row nodeDiv">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="x_panel">
+				<div class="x_title">
+					<button class="btn addSG btn-primary" type="button" data-toggle="modal" data-target="#sgActions">Add</button>
+					<button class="btn editSG btn-primary" type="button">Edit</button>
+					<button class="btn deleteSG btn-primary" type="button">Delete</button>
+					<div class="clearfix"></div>
+				</div>
+				<div class="x_content">
+					<div class="table-responsive">
+						<table id="policyDelTable" class="table-hover table" style="width:100%">
+							<thead>
+								<tr>
+									<th>Cloud Type</th>
+									<th>Security Config Name</th>
+									<th>Config ID</th>
+									<th>Cluster</th>
+									<th>Cloud ID</th>
+									<th>Description</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="7">No records found</td>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row headingThree nodeDiv">
+		<div class="col-xl-12">
+			<div class="x_panel neoDivCard">
+				<div class="x_title">
+					<img title="Fullscreen" class="fullSrnBtn" height="25px" width="25px" src="/static/scf_static/images/window_fullscreen_1-512.png">
+					<img title="Contract" class="smallSrnBtn" height="30px" width="40px" src="/static/scf_static/images/minimize-maximize-buttons-icons_210978.jpg">
+					<div class="clearfix"></div>
+				</div>
+				<div class="x_content">
+					<div class="row">
+						<div class="col-md-9">
+							<div class="form-inline nodeFilters">
+								<div class="form-group">
+									<label class="selectLabel">Cloud Type</label>
+									<select class="form-control cloudSel">
+										<option value="KUBERNETES" selected>Kubernetes</option>
+										<option value="AWS">AWS</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label class="selectLabel">Node Type</label>
+									<select class="form-control nodeType">
+										<option value=""></option>
+										<option value="0">Components</option>
+										<option value="1">Namespace</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label class="selectLabel">Condition</label>
+									<select class="form-control conditionType">
+										<option value=""></option>
+										<option value="0">Critical Alarm</option>
+										<option value="1">Emergency Alarm</option>
+										<option value="2">Warning Alarm</option>
+									</select>
+								</div>
+								<button class="btn btn-primary appFilters" type="button"> Apply </button>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="refreshSlider">
+								<!-- <span> Graph Refresh </span> -->
+								<div class="timerDiv">
+									<span class="refTab">Graph Refresh</span>
+									<label>
+										<span class="timeCounterSpan">20 sec</span>
+										<div class="sliderDiv">
+											<label class="switch">
+												<input type="checkbox" class="sliderCheckbox">
+												<span class="slider round"></span>
+											</label>
+										</div>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div id="neo4jd3" style="max-height: calc( 100vh - 40%);min-height:calc( 100vh - 40%);"></div>
+				</div>
+				<div class="row">
+					<div class="col-md-8">
+						<div id="rcorners2" style="margin-top:15px;">
+							<ul class="list-inline labelsList">
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div style="text-align:right;margin-top:15px;">
+							<div class="token token-label" style="background-color: rgb(165, 171, 182);color: rgb(255, 255, 255);">Critical
+								<!-- <i class="fa fa-eye"></i> -->
+								<img src="/static/scf_static/images/emergency.svg" width="20px" height="20px" />
+							</div>
+							<div class="token token-label" style="background-color: rgb(165, 171, 182);color: rgb(255, 255, 255);">Emergency
+								<!-- <i class="fa fa-unlock"></i> -->
+								<img src="/static/scf_static/images/danger.png" width="20px" height="20px" />
+							</div>
+							<div class="token token-label" style="background-color: rgb(165, 171, 182); color: rgb(255, 255, 255);">Warning
+								<!-- <i class="fa fa-crosshairs"></i> -->
+								<img src="/static/scf_static/images/warn.png" width="20px" height="20px" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="sgTempActions" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+	 data-backdrop="static">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Create Template</h4>
+				</div>
+				<div class="modal-body">
+					<form action="" id="sgTempForm">
+						<div class="sgDetails">
+							<div class="row">
+								<div class="col-md-12">
+									<label for="cloudType" class="labelTxt">Cloud Type</label>
+									<select name="cloudType" class="form-control" id="cloudType">
+										<option value="aws">AWS</option>
+										<option value="kubernetes">Kubernetes</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="sgRules" style="padding-top:20px;">
+							<h6>Specifications</h6>
+							<br/>
+							<div class="contentSourceDiv">
+								<div class="src">
+									<a href="#" id="permalink" style="display:none;">permalink</a>
+									<h6>Edit YAML here</h6>
+									<textarea id="sourceTemp"></textarea>
+								</div>
+								<div class="dst">
+									<!-- <h6>Error Message</h6> -->
+									<div id="resultTemp"></div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default btn-success createTemp">Create</button>
+					<button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="sgActions" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Create Policy</h4>
+				</div>
+				<div class="modal-body">
+					<form action="" id="sgForm">
+						<div class="sgDetails">
+							<div class="awsDiv">
+								<div class="navPanel">
+									<div class="panelBox active" data-target="#cloudTypeDiv">
+										<span class="panelText">1</span>
+									</div>
+									<!-- <div class="panelAfterDiv"></div> -->
+									<img src="../static/scf_static/images/arrow.png" class="arrow_img" />
+									<div class="panelBox" data-target="#tempNameDiv">
+										<span class="panelText">2</span>
+									</div>
+									<!-- <div class="panelAfterDiv"></div> -->
+									<img src="../static/scf_static/images/arrow.png" class="arrow_img" />
+									<div class="panelBox" data-target="#cloudNameDiv">
+										<span class="panelText">3</span>
+									</div>
+									<!-- <div class="panelAfterDiv"></div> -->
+									<img src="../static/scf_static/images/arrow.png" class="arrow_img" />
+									<div class="panelBox" data-target="#clusterDiv">
+										<span class="panelText">4</span>
+									</div>
+								</div>
+								<br/>
+								<br/>
+								<div id="awsDetailsCarousel" class="carousel slide" data-ride="carousel">
+									<div class="carousel-inner">
+										<div class="carousel-item active item" id="#cloudTypeDiv">
+											<div class="innerSelectDiv">
+												<label for="cloudType" class="labelTxt">Select Cloud Type: </label>
+												<select name="cloudType" class="form-control awsSelects" id="cloudTypeSel">
+													<option value="">Please Select</option>
+													<option value="aws">AWS</option>
+													<option value="kubernetes">Kubernetes</option>
+												</select>
+											</div>
+										</div>
+										<div class="carousel-item item" id="tempNameDiv">
+											<div class="innerSelectDiv">
+												<label for="tempName" class="labelTxt">Select Template: </label>
+												<select name="tempName" class="form-control awsSelects" id="tempName">
+												</select>
+											</div>
+										</div>
+										<div class="carousel-item item" id="cloudNameDiv">
+											<div class="innerSelectDiv">
+												<label for="cloudName" class="labelTxt">Select Cloud Name: </label>
+												<select name="cloudName" class="form-control awsSelects" id="cloudName">
+												</select>
+											</div>
+										</div>
+										<div class="carousel-item item" id="clusterDiv">
+											<div class="innerSelectDiv">
+												<label for="clusterList" class="labelTxt">Select Cluster: </label>
+												<select name="clusterList" class="form-control awsSelects" id="clusterList">
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sgRules" style="padding-top:20px;">
+							<h6>Specifications</h6>
+							<br/>
+							<div class="contentSourceDiv">
+								<div class="src">
+									<a href="#" id="permalink" style="display:none;">permalink</a>
+									<h6>Edit YAML here</h6>
+									<textarea id="source" readonly="true"></textarea>
+								</div>
+								<div class="dst">
+									<div id="result"></div>
+								</div>
+							</div>
+						</div>
+
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default btn-success createPolicy">Create</button>
+					<button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<link href="/static/third_party/node_modules/neo4jd3/docs/css/neo4jd3.min.css" rel="stylesheet" type="text/css" />
+	<link href="/static/scf_static/css/codemirror.css" rel="stylesheet" type="text/css" />
+	<link href="/static/scf_static/css/demo.css" rel="stylesheet" type="text/css" />
+	<link href="/static/scf_static/css/nodeGraph.css" rel="stylesheet" type="text/css" />
+	<link href="/static/scf_static/css/securityConfig.css" rel="stylesheet" type="text/css" />
+
+	<!-- <script src="/static/scf_static/js/socialGraphInit.js"></script> -->
+	<script src="/static/third_party/node_modules/neo4jd3/docs/js/d3.min.js"></script>
+	<script src="/static/scf_static/js/neo4jd3.js?v=0.0.1"></script>
+	<script src="/static/scf_static/js/neoInit.js"></script>
+	<script src="/static/scf_static/js/securityConfig.js"></script>
+	<script src="https://cdn.jsdelivr.net/es5.shim/4.4.1/es5-shim.min.js"></script>
+	<script src="/static/scf_static/js/js-yaml-master/lib/js-yaml.js"></script>

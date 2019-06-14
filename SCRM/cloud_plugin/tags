@@ -1,0 +1,86 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AwsPluginConfig	apps.py	/^class AwsPluginConfig(AppConfig):$/;"	c
+ComputeInstance	models.py	/^class ComputeInstance(models.Model):$/;"	c
+ComputeInstanceSerializer	serializers.py	/^class ComputeInstanceSerializer(serializers.ModelSerializer):$/;"	c
+Description	models.py	/^	Description = models.TextField(blank=True)$/;"	v	class:SecurityGroup
+Egress	models.py	/^	Egress = models.TextField(blank=True)$/;"	v	class:SecurityGroup
+EndPoint	models.py	/^	EndPoint = models.CharField(max_length=256)$/;"	v	class:Region
+GroupId	models.py	/^	GroupId = models.CharField(primary_key=True, max_length=256)$/;"	v	class:SecurityGroup
+GroupName	models.py	/^	GroupName = models.CharField(max_length=256)           $/;"	v	class:SecurityGroup
+ImageId	models.py	/^	ImageId = models.CharField(max_length=256)$/;"	v	class:ComputeInstance
+Ingress	models.py	/^	Ingress = models.TextField(blank=True)$/;"	v	class:SecurityGroup
+InstanceType	models.py	/^	InstanceType = models.CharField(max_length=256)$/;"	v	class:ComputeInstance
+LastUpdated	models.py	/^	LastUpdated = models.DateTimeField(auto_now=True)$/;"	v	class:ComputeInstance
+LastUpdated	models.py	/^	LastUpdated = models.DateTimeField(auto_now=True)$/;"	v	class:Region
+LastUpdated	models.py	/^	LastUpdated = models.DateTimeField(auto_now=True)$/;"	v	class:SecurityGroup
+LaunchTime	models.py	/^	LaunchTime = models.DateTimeField()$/;"	v	class:ComputeInstance
+Meta	models.py	/^	class Meta:$/;"	c	class:ComputeInstance
+Meta	models.py	/^	class Meta:$/;"	c	class:Region
+Meta	models.py	/^	class Meta:$/;"	c	class:SecurityGroup
+Meta	serializers.py	/^    class Meta:$/;"	c	class:ComputeInstanceSerializer
+Meta	serializers.py	/^    class Meta:$/;"	c	class:RegionSerializer
+Meta	serializers.py	/^    class Meta:$/;"	c	class:SecurityGroupSerializer
+Migration	migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	c
+OwnerId	models.py	/^	OwnerId = models.CharField(max_length=256)$/;"	v	class:SecurityGroup
+PrivateDnsName	models.py	/^	PrivateDnsName = models.CharField(max_length=256)$/;"	v	class:ComputeInstance
+PrivateIpAddress	models.py	/^	PrivateIpAddress = models.CharField(max_length=256)$/;"	v	class:ComputeInstance
+PublicDnsName	models.py	/^	PublicDnsName = models.CharField(max_length=256)$/;"	v	class:ComputeInstance
+PublicIpAddress	models.py	/^	PublicIpAddress = models.CharField(max_length=256)$/;"	v	class:ComputeInstance
+Region	models.py	/^class Region(models.Model):$/;"	c
+RegionId	models.py	/^	RegionId = models.AutoField(primary_key=True)$/;"	v	class:Region
+RegionId	models.py	/^	RegionId = models.ForeignKey('Region', on_delete=models.CASCADE)$/;"	v	class:ComputeInstance
+RegionList	views.py	/^class RegionList(APIView):$/;"	c
+RegionName	models.py	/^	RegionName = models.CharField(max_length=256)$/;"	v	class:Region
+RegionSerializer	serializers.py	/^class RegionSerializer(serializers.ModelSerializer):$/;"	c
+SecurityGroup	models.py	/^class SecurityGroup(models.Model):$/;"	c
+SecurityGroupId	models.py	/^	SecurityGroupId = models.ForeignKey('SecurityGroup', on_delete=models.CASCADE)$/;"	v	class:ComputeInstance
+SecurityGroupList	views.py	/^class SecurityGroupList(APIView):$/;"	c
+SecurityGroupSerializer	serializers.py	/^class SecurityGroupSerializer(serializers.ModelSerializer):$/;"	c
+State	models.py	/^	State = models.CharField(max_length=256)$/;"	v	class:ComputeInstance
+SubnetId	models.py	/^	SubnetId = models.CharField(max_length=256)$/;"	v	class:ComputeInstance
+VpcId	models.py	/^	VpcId = models.CharField(max_length=256)$/;"	v	class:ComputeInstance
+VpcId	models.py	/^	VpcId = models.CharField(max_length=256)$/;"	v	class:SecurityGroup
+awsService	nameko.py	/^class awsService:$/;"	c
+db_table	models.py	/^      		db_table = "computeInstance"$/;"	v	class:ComputeInstance.Meta
+db_table	models.py	/^      		db_table = "region"$/;"	v	class:Region.Meta
+db_table	models.py	/^      		db_table = "securityGroup"$/;"	v	class:SecurityGroup.Meta
+dependencies	migrations/0001_initial.py	/^    dependencies = [$/;"	v	class:Migration
+dispatch	nameko.py	/^    dispatch = EventDispatcher()$/;"	v	class:awsService
+dispatching_method	nameko.py	/^    def dispatching_method(self, payload):$/;"	m	class:awsService
+event_aws	nameko.py	/^    def event_aws(self, payload):$/;"	m	class:awsService
+exclude	serializers.py	/^            exclude = ("LastUpdated",)$/;"	v	class:RegionSerializer.Meta
+field	migrations/0001_initial.py	/^            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='AWS_Plugin.Region'),$/;"	v	class:Migration
+field	migrations/0001_initial.py	/^            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='AWS_Plugin.SecurityGroup'),$/;"	v	class:Migration
+fields	migrations/0001_initial.py	/^            fields=[$/;"	v	class:Migration
+fields	serializers.py	/^	    fields = ($/;"	v	class:ComputeInstanceSerializer.Meta
+fields	serializers.py	/^            fields = ($/;"	v	class:SecurityGroupSerializer.Meta
+get	views.py	/^    def get(self, request, pk, format=None):$/;"	m	class:SecurityGroupList
+initial	migrations/0001_initial.py	/^    initial = True$/;"	v	class:Migration
+instance_id	models.py	/^	instance_id = models.CharField(primary_key=True, max_length=256)$/;"	v	class:ComputeInstance
+model	serializers.py	/^	    model = ComputeInstance$/;"	v	class:ComputeInstanceSerializer.Meta
+model	serializers.py	/^            model = Region$/;"	v	class:RegionSerializer.Meta
+model	serializers.py	/^            model = SecurityGroup$/;"	v	class:SecurityGroupSerializer.Meta
+model_name	migrations/0001_initial.py	/^            model_name='computeinstance',$/;"	v	class:Migration
+name	apps.py	/^    name = 'AWS_Plugin'$/;"	v	class:AwsPluginConfig
+name	migrations/0001_initial.py	/^            name='ComputeInstance',$/;"	v	class:Migration
+name	migrations/0001_initial.py	/^            name='Region',$/;"	v	class:Migration
+name	migrations/0001_initial.py	/^            name='RegionId',$/;"	v	class:Migration
+name	migrations/0001_initial.py	/^            name='SecurityGroup',$/;"	v	class:Migration
+name	migrations/0001_initial.py	/^            name='SecurityGroupId',$/;"	v	class:Migration
+name	nameko.py	/^    name = "awsService"$/;"	v	class:awsService
+operations	migrations/0001_initial.py	/^    operations = [$/;"	v	class:Migration
+options	migrations/0001_initial.py	/^            options={$/;"	v	class:Migration
+read_only	serializers.py	/^            read_only = ($/;"	v	class:RegionSerializer.Meta
+regionGet	views.py	/^    def regionGet(self, request, format=None):$/;"	m	class:RegionList
+result	nameko.py	/^    result = ""$/;"	v	class:awsService
+securityGroupCreate	views.py	/^    def securityGroupCreate(self, request, format=None):$/;"	m	class:SecurityGroupList
+securityGroupDelete	views.py	/^    def securityGroupDelete(self, request, pk, format=None):$/;"	m	class:SecurityGroupList
+securityGroupEdit	views.py	/^    def securityGroupEdit(self, request, pk, format=None):$/;"	m	class:SecurityGroupList
+securityGroupGet	views.py	/^    def securityGroupGet(self, request, format=None):$/;"	m	class:SecurityGroupList
+securityGroupView	views.py	/^    def securityGroupView(self, pk):$/;"	m	class:SecurityGroupList
+urlpatterns	urls.py	/^urlpatterns = [$/;"	v

@@ -1,0 +1,151 @@
+<div id="loader-wrapper" ng-show="showLoader">
+	<div class="loader"></div>
+</div>
+<div ng-show="!showLoader">
+	<div class="row headStart">
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" data-href="graphview">
+			<span class="headTxt active">CRISP Social Graph</span>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" data-href="alarmEvents">
+			<span class="headTxt">Alarms And Events</span>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" data-href="sunburstView">
+			<span class="headTxt">Risk Profile</span>
+		</div>
+	</div>
+	<div class="row graphview nodeDiv">
+		<div class="col-xl-12">
+			<div class="x_panel neoDivCard">
+				<div class="x_title">
+					<img title="Fullscreen" class="fullSrnBtn" height="25px" width="25px" src="/static/scf_static/images/window_fullscreen_1-512.png">
+					<img title="Contract" class="smallSrnBtn" height="30px" width="40px" src="/static/scf_static/images/minimize-maximize-buttons-icons_210978.jpg">
+					<div class="clearfix"></div>
+				</div>
+				<div class="x_content">
+					<div class="refreshSlider">
+						<div class="timerDiv">
+							<span class="refTab">Graph Refresh</span>
+							<label>
+								<span class="timeCounterSpan">20 sec</span>
+								<div class="sliderDiv">
+									<label class="switch">
+										<input type="checkbox" class="sliderCheckbox">
+										<span class="slider round"></span>
+									</label>
+								</div>
+							</label>
+						</div>
+					</div>
+					<div id="neo4jd3" data-graph='crispNeo'></div>
+					<div class="row rowBottom">
+						<div class="col-md-8">
+							<div id="rcorners2" style="margin-top:15px;">
+								<ul class="list-inline labelsList">
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div style="text-align:right;margin-top:15px;">
+								<div class="token token-label" style="background-color: rgb(165, 171, 182);color: rgb(255, 255, 255);">Critical
+									<!-- <i class="fa fa-eye"></i> -->
+									<img src="/static/scf_static/images/emergency.svg" width="20px" height="20px" />
+								</div>
+								<div class="token token-label" style="background-color: rgb(165, 171, 182);color: rgb(255, 255, 255);">Emergency
+									<!-- <i class="fa fa-unlock"></i> -->
+									<img src="/static/scf_static/images/danger.png" width="20px" height="20px" />
+								</div>
+								<div class="token token-label" style="background-color: rgb(165, 171, 182); color: rgb(255, 255, 255);">Warning
+									<!-- <i class="fa fa-crosshairs"></i> -->
+									<img src="/static/scf_static/images/warn.png" width="20px" height="20px" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row alarmEvents nodeDiv">
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="x_panel">
+				<div class="x_content">
+					<div class="" role="tabpanel">
+						<ul class="nav nav-tabs bar_tabs">
+							<li role="presentation" class="active">
+								<a data-toggle="tab" data-target="#home">Alarms</a>
+							</li>
+							<li>
+								<a data-toggle="tab" data-target="#menudiv">Events</a>
+							</li>
+						</ul>
+					</div>
+					<div class="tab-content">
+						<div id="home" class="tab-pane fade active in">
+							<div class="table-responsive">
+								<table class="table table-hover table-bordered" id="alarmTable">
+									<thead class="thead-light">
+										<tr>
+											<th>#</th>
+											<th>Cloud Type</th>
+											<th>Resource Type</th>
+											<th>Resource-ID</th>
+											<th>Event Description</th>
+											<th>Criticality</th>
+										</tr>
+										<tbody>
+										</tbody>
+									</thead>
+								</table>
+							</div>
+						</div>
+						<div id="menudiv" class="tab-pane fade">
+							<div class="table-responsive">
+								<table class="table table-hover" id="eventTable">
+									<thead class="thead-light">
+										<tr>
+											<th>#</th>
+											<th>Events Type</th>
+											<th>Resource Type</th>
+											<th>Resource-ID</th>
+											<th>Event Description</th>
+											<th>Criticality</th>
+										</tr>
+										<tbody>
+											<tr>
+												<td colspan="2">No Events found</td>
+											</tr>
+										</tbody>
+									</thead>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row sunburstView nodeDiv">
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="x_panel">
+				<div class="x_content">
+					<div class="sunburstCrisp"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<link href="../static/scf_static/css/context.standalone.css" rel="stylesheet" type="text/css" />
+<link href="../static/third_party/node_modules/neo4jd3/docs/css/neo4jd3.min.css" rel="stylesheet" type="text/css" />
+<link href="../static/scf_static/css/nodeGraph.css" rel="stylesheet" type="text/css" />
+<link href="../static/scf_static/css/crisp.css" rel="stylesheet" type="text/css">
+<!-- <link href="../static/scf_static/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+
+<script src="../static/scf_static/js/context.js"></script>
+<!-- <script src="../static/scf_static/js/socialGraphInit.js"></script> -->
+<script src="../static/third_party/node_modules/neo4jd3/docs/js/d3.min.js"></script>
+<!-- <script src="https://d3js.org/d3.v3.min.js"></script> -->
+<script src="../static/scf_static/js/neo4jd3.js?v=0.0.1"></script>
+<script src="../static/scf_static/js/crisp.js"></script>
+<script src="../static/scf_static/js/auditorRules.js"></script>
+<script src="../static/scf_static/js/neoInit.js"></script>

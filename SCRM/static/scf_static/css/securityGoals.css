@@ -1,0 +1,446 @@
+.labelsList>li {
+    margin-bottom: 10px;
+}
+
+/* .tabsDiv {
+    height: 100%;
+    overflow-y: auto;
+} */
+
+#tabs-1,
+#tabs-3,
+.wrap {
+    /* min-height: calc(100vh - 45%);
+    max-height: calc(100vh - 45%); */
+    min-height: 50vh;
+    max-height: 50vh;
+}
+
+.wrap {
+    margin-top: 10px;
+    overflow: auto;
+}
+
+#tabs-1,
+#tabs-3 {
+    /* background-image: url("./static/assets/images/grid.png"); */
+    background-size: cover;
+    overflow-x: auto;
+    -webkit-transition: width 0.3s ease;
+    -moz-transition: width 0.3s ease;
+    -o-transition: width 0.3s ease;
+    transition: width 0.3s ease;
+}
+
+#tabs-1 .btn-group,
+#tabs-3 .btn-group {
+    margin-bottom: 10px !important;
+}
+
+#operator_title {
+    width: 80%;
+    display: inline-block;
+    height: 30px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* .postureDiv {
+    font-size: 10px;
+    color: red;
+} */
+
+.row1 {
+    margin-bottom: 15px;
+}
+
+/* #save_button {
+    position: absolute;
+    top: 23px;
+    right: 35px;
+    font-size: 20px;
+    color: #3f51b5;
+    font-weight: bolder;
+    cursor: pointer;
+} */
+
+.postureNameDiv {
+    position: absolute;
+    right: 10px;
+    border: 1px solid white;
+    width: 100%;
+    top: -2px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px 20px;
+}
+
+.postureName {
+    display: inline-block;
+    width: 60%;
+    margin: 0px 10px;
+}
+
+span.actionButtons {
+    float: right;
+    z-index: 2;
+    position: relative;
+    padding: 5px;
+}
+
+span.actionButtons>i {
+    margin: 0px 2px;
+}
+
+.postureList {
+    display: inline-block;
+    width: 70%;
+}
+
+#ajaxTreeCrud {
+    max-height: 40%;
+    overflow-y: auto;
+}
+
+/* flowchart.css */
+
+.flowchart-operator {
+    width: 150px !important;
+    padding: 10px 0px 0px 0px;
+}
+
+.flowchart-operator,
+.flowchart-operator .flowchart-operator-title {
+    border: 1px solid !important;
+    background: #A4AFB7 !important;
+    border-radius: 15px;
+}
+
+.flowchart-operator .flowchart-operator-title {
+    border: none !important;
+    text-align: center;
+}
+
+.flowchart-operator-connector-arrow {
+    top: -15px !important;
+    border-left: 10px solid !important;
+}
+
+.flowchart-operator-connector-small-arrow {
+    top: -10px !important;
+}
+
+.close.cancelNode {
+    top: -8px !important;
+    right: -8px !important
+}
+
+/* new imple */
+
+/* .baseName {
+    display: inline-block;
+    width: 30%;
+} */
+
+.milestoneDiv {
+    border: 1px solid #ecf0f1;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #ecf0f1;
+}
+
+.stepProgress {
+    position: relative;
+    padding-left: 45px;
+    list-style: none;
+}
+
+.stepProgress::before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 24px;
+    width: 10px;
+    height: 100%;
+    border-left: 2px solid #ccc;
+}
+
+.stepProgress-item {
+    position: relative;
+    counter-increment: list;
+}
+
+.stepProgress-item:not(:last-child) {
+    padding-bottom: 60px;
+}
+
+.stepProgress-item::before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    left: -21px;
+    height: 100%;
+    width: 10px;
+}
+
+.stepProgress-item::after {
+    content: counter(list);
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -35px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    background-color: #fff;
+    font-size: 21px;
+    text-align: center;
+}
+
+.stepProgress-item.is-done::before {
+    border-left: 2px solid #34495E;
+}
+
+.stepProgress-item.is-done::after {
+    content: "âœ”";
+    font-size: 21px;
+    color: #fff;
+    text-align: center;
+    border: 2px solid #34495E;
+    background-color: #34495E;
+}
+
+.stepProgress-item.current::before {
+    border-left: 3px solid #34495E;
+}
+
+.stepProgress-item.current::after {
+    content: counter(list);
+    /* padding-top: 1px; */
+    width: 30px;
+    height: 30px;
+    top: -2px;
+    left: -35px;
+    font-size: 21px;
+    text-align: center;
+    color: #ffffff;
+    border: 2px solid #34495E;
+    background-color: #34495E;
+}
+
+.stepProgress p {
+    display: block;
+    padding: 4px 0px 0px 10px;
+}
+
+.stepProgress-item.current p {
+    padding: 5px 0px 5px 15px;
+    background-color: lightslategrey;
+    color: white;
+    font-weight: bolder;
+    border-radius: 12px;
+}
+
+.panelBox {
+    display: inline-block;
+    width: 70px;
+    text-align: center;
+    height: 70px;
+    background-color: #ccc;
+    padding: 9px 0px;
+    border-radius: 50%;
+    color: black;
+    position: relative;
+    cursor: pointer;
+}
+
+.panelText {
+    top: 15px;
+    font-size: 15px;
+    position: relative;
+}
+
+.navPanel {
+    text-align: center;
+}
+
+.arrow_img {
+    position: relative;
+    top: 15px;
+    height: 30px;
+    width: 85px;
+}
+
+/* ccarousel */
+
+.MultiCarousel {
+    float: left;
+    overflow: hidden;
+    padding: 15px;
+    width: auto;
+    position: relative;
+    margin-left: 35px;
+    margin-top: 10px;
+}
+
+.MultiCarousel .MultiCarousel-inner {
+    transition: 1s ease all;
+    float: left;
+    border-top: 2px dotted;
+}
+
+.MultiCarousel .MultiCarousel-inner .item {
+    float: left;
+    margin: 0px 30px 0px 25px;
+}
+
+/* .MultiCarousel .MultiCarousel-inner .item:last-child {
+    margin: 0px 25px 0px 5px;
+}
+
+.MultiCarousel .MultiCarousel-inner .item:first-child {
+    margin: 0px 0px 0px 20px;
+} */
+
+.MultiCarousel .MultiCarousel-inner .item>div {
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0px;
+    background: #f1f1f1;
+    color: #666;
+    border: 1px solid #666;
+    border-radius: 10px;
+}
+
+.MultiCarousel .leftLst,
+.MultiCarousel .rightLst {
+    position: absolute;
+    border-radius: 50%;
+    top: calc(50% - 13px);
+}
+
+.MultiCarousel .leftLst {
+    left: 0;
+}
+
+.MultiCarousel .rightLst {
+    right: 0;
+}
+
+.MultiCarousel .leftLst.over,
+.MultiCarousel .rightLst.over {
+    pointer-events: none;
+    background: #ccc;
+}
+
+/* carousel ends */
+
+.panelBox.active {
+    background-color: #26B99A;
+    color: white;
+    font-weight: bolder;
+}
+
+.row.rowBase>div::after {
+    content: '';
+    border-left: 2px dotted;
+    position: absolute;
+    width: 13px;
+    height: 27px;
+    top: 25px;
+    left: 60px;
+    text-align: center;
+}
+
+.lead {
+    font-size: 13px !important;
+    margin-bottom: 0px;
+}
+
+.baseBtnsDiv {
+    padding-left: 2.5%;
+    padding-top: 5px;
+}
+
+#step-2 .baseBtnsDiv {
+    text-align: right;
+}
+
+.baseBtnsDiv>button {
+    min-width: 70px;
+    margin-right: 5px;
+}
+
+.MultiCarousel-inner .item.selected div.pad15 {
+    background-color: lightslategrey;
+    color: white;
+    border-radius: 10px;
+}
+
+#tabs-1 .cancelNode {
+    display: none;
+}
+
+.btnsDiv {
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+}
+
+#cloudName,
+#clusterList {
+    width: 60%;
+    display: inline-block;
+}
+
+.applyStepsDiv {
+    background-color: #ecf0f1;
+    min-height: calc(100vh - 60%);
+    border-radius: 20px;
+    padding: 20px 25px;
+}
+
+.labelTxt {
+    font-weight: bolder;
+}
+
+#auditorList {
+    width: 55%;
+    display: inline-block;
+}
+
+#auditType {
+    width: 80%;
+    display: inline-block;
+}
+
+.ui-state-active a,
+.ui-state-active a:link,
+.ui-state-active a:visited {
+    color: #ffffff;
+    padding: 10px;
+}
+
+li.ui-state-default.ui-corner-top.ui-tabs-active.ui-state-active {
+    width: auto;
+    float: left;
+    padding: 5px 10px;
+    background-color: #26B99A;
+    border: 1px solid transparent;
+}
+
+ul.ui-tabs-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all {
+    background: none;
+    border: none;
+}
+
+#cloudType{
+    display: inline-block;
+    width: 85%;
+}
+
+.innerSelectDiv > .form-control{
+    width: 50%;
+}

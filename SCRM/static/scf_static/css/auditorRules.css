@@ -1,0 +1,93 @@
+.auditTableDiv .card-box {
+    width: 100%;
+}
+
+.auditListDiv {
+    text-align: right;
+}
+
+.footable-detail-row td {
+    padding: 5px 0px 0px 0px;
+}
+
+.footable-detail-row th {
+    padding: 5px 10px 10px 10px;
+}
+
+.footable-detail-row tr {
+    font-size: 13px;
+}
+
+.selectedRow {
+    background-color: #3f51b5;
+    color: #ffffff;
+}
+
+.editAudit {
+    color: green;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.delAudit {
+    color: red;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+#auditorModal .form-control {
+    width: 55%;
+    display: inline-block;
+}
+
+.fullSrnBtn {
+    top: -15px;
+    bottom: 0px;
+}
+
+#auditorTable>tbody tr:not(.footable-detail-row) {
+    cursor: pointer;
+}
+
+.footable-details tr {
+    background-color: #f5f5f5;
+}
+
+#auditorTable {
+    font-size: 14px;
+}
+
+#auditorModalView .form-control {
+    display: inline-block;
+    width: 80%;
+}
+
+table.footable>tbody>tr.footable-empty>td {
+    text-align: left;
+    font-size: 14px;
+}
+
+.reportList {
+    max-height: calc(100vh - 50%);
+    overflow-y: auto;
+}
+
+.auditReportTable {
+    font-size: 12px;
+}
+
+.reportFind {
+    text-transform: uppercase;
+    margin: 15px 0px;
+}
+
+.neoDivCard .cardHeader {
+    width: 40%;
+    display: inline-block;
+}
+
+.crispAuditGraph {
+    width: 58%;
+    display: inline-block;
+    margin-bottom: 10px;
+}

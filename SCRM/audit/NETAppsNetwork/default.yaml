@@ -1,0 +1,16 @@
+lastchecked : "2018-08-23 12:02:39.444204"
+auditors : 
+    - name : "SecurityGroupAuditor"
+      methods : 
+          - name : "_check_cross_account"
+          - name : "_check_for_override_score"
+          - name : "_check_internet_accessible"
+          - name : "check_friendly_cross_account_egress"
+          - name : "check_friendly_cross_account_ingress"
+          - name : "check_internet_accessible_egress"
+          - name : "check_internet_accessible_inress"
+          - name : "check_securitygroup_ec2_rfc1918"
+          - name : "check_thirdparty_cross_account_egress"
+          - name : "check_thirdparty_cross_account_ingress"
+          - name : "check_unknown_cross_account_egress"
+          - name : "check_unknown_cross_account_ingress"

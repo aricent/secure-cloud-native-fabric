@@ -1,0 +1,127 @@
+.main_menu .fa,
+		.main_menu .fas,
+		.main_menu .fab {
+			width: 26px;
+			opacity: .99;
+			display: inline-block;
+			font-family: "Font Awesome 5 Free";
+			font-style: normal;
+			font-weight: 900;
+			font-size: 18px;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale
+		}
+
+		.main_menu .fab {
+			font-family: "Font Awesome 5 Brands";
+		}
+
+		.close {
+			top: 0px;
+			position: absolute;
+			right: -15px;
+			height: 25px;
+			width: 25px;
+			background-color: #343c49 !important;
+			opacity: 1;
+			border: 2px solid #ffffff;
+			text-shadow: none;
+			color: #ffffff;
+			border-radius: 50%;
+			padding: 0;
+			font-size: 18px;
+		}
+
+		.boot-img {
+			width: 12%;
+			height: 12%;
+			display: inline-block;
+		}
+
+		.modal-sm .boot-img {
+			width: 20%;
+		}
+
+		.boot-para {
+			display: inline-block;
+			position: relative;
+			top: -10px;
+			margin-left: 15px;
+		}
+
+		.modal-header .close {
+			margin-top: -10px;
+		}
+
+		.headStart {
+		/* position: relative; */
+		border-bottom: 1px solid #aaa;
+		text-align: center;
+		font-weight: bolder;
+		margin-bottom: 20px;
+	}
+
+	.headTxt {
+		cursor: pointer;
+		padding-bottom: 10px;
+	}
+
+	.headTxt.active {
+		/* border-bottom: 3px solid #4255bd; */
+		color: black;
+		font-weight: bolder;
+	}
+
+	.headStart>div {
+		margin-bottom: 10px;
+	}
+
+	#loader-wrapper {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1000;
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+
+	.loader {
+		border: 16px solid #f3f3f3;
+		border-radius: 50%;
+		border-top: 16px solid #1ABB9C;
+		width: 80px;
+		height: 80px;
+		-webkit-animation: spin 2s linear infinite;
+		/* Safari */
+		animation: spin 2s linear infinite;
+		position: relative;
+		top: 50%;
+		left: 50%;
+	}
+
+	/* Safari */
+
+	@-webkit-keyframes spin {
+		0% {
+			-webkit-transform: rotate(0deg);
+		}
+		100% {
+			-webkit-transform: rotate(360deg);
+		}
+	}
+
+	@keyframes spin {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	.logoImg {
+		width: 60px;
+    		left: -6px;
+    		position: relative;
+	}	
