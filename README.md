@@ -56,71 +56,30 @@ SCF enables goal-based visibility into changes in security control configuration
     2.2) [Security across Hybrid Cloud Deployments](./documentation/hybrid_cloud.md)   
 
 
-## Third party plugins   
-Following are client and server side dependencies on which our application run:
+## Third party dependencies   
+The following third-party libaries have been used in SCF :
 
-* **Bootstrap 3**    
-    * It is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation and other interface components.
-    * **License -** MIT
-* **JQuery**  
-    * jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.
-    * **License -** MIT
-* **Font Awesome**    
-    * Font Awesome is a font and icon toolkit based on CSS and LESS.
-    * **License -** MIT
-* **AngularJS**       
-    * It is a JavaScript-based open-source front-end web framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications.   
-    * **License -** MIT
-* **D3 JS**    
-    * It is a JavaScript library for producing dynamic, interactive data visualizations in web browsers. It makes use of the widely implemented Scalable Vector Graphics, HTML5, and Cascading Style Sheets standards.    
-    * **License -** BSD
-* **Yaml Editor**    
-    * This is an implementation of YAML, a human-friendly data serialization language.    
-    * **License -** MIT
-* **Contextual Menu**    
-    * A context menu is a menu in a graphical user interface that appears upon user interaction, such as a right-click mouse operation.
-    * **License -** MIT
-* **Footable JS**   
-    * A responsive table plugin built on jQuery.
-    * **License -** MIT
-* **Gauge JS**    
-    * It is a handy JavaScript plugin for generating and animating nice & clean dashboard gauges.
-    * **License -** MIT
-* **Charts JS**    
-    * Simple, clean and engaging HTML5 based JavaScript charts. Chart.js is an easy way to include animated, interactive graphs.
-    * **License -** MIT
-* **FastClick JS**      
-    * It is a simple, easy-to-use library for eliminating the 300ms delay between a physical tap and the firing of a click event on mobile browsers. The aim is to make your application feel less laggy.
-    * **License -** MIT
-* **Bootbox**   
-    * It is a tiny jQuery plugin for creating alert, confirm and flexible dialog boxes using Twitter's Bootstrap framework.
-    * **License -** MIT
-* **JQV Maps**   
-    * It is a jQuery plugin that renders Interactive, Clickable Vector Maps. It uses resizable Scalable Vector Graphics (SVG) for modern browsers.
-    * **License -** MIT OR GPL-3.0
-* **JS Tree**       
-    * It is jquery plugin, that provides interactive trees. It is easily extendable, themable and configurable, it supports HTML & JSON data sources and AJAX loading.
-    * **License -** MIT
-* **Flowchart JS**       
-    * It is a jQuery & jQuery UI based flowchart plugin which enables you to create drag'n'drop flowchart boxes and connect between them with a custom line.
-    * **License -** MIT
-* **Neo4j Graphs**       
-    * It is a graph visualization and analysis platform. It connects directly to Neo4j's graph database technology.
-    * **License -** MIT
-* **Elastic search**    
-    * Elasticsearch is a highly-scalable document storage engine that specializes in search. The JSON-based nature of Elasticsearch, along with its simple REST API, make it easy to learn.
-    * **License -** Apache 2.0
-* **Python 3**    
-    * It is an interpreted, high-level, general-purpose programming language used on a server to create web applications.
-    * **License -** Python Software Foundation License (PSFL) is a BSD-style, permissive free software license which is compatible with the GNU General Public License (GPL)
-* **Pip 3**    
-    * PIP is a package manager for Python packages, or modules.
-* **Nginx**    
-    * Nginx is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.
-    * **License -** 2-clause BSD
-* **Nats messaging system**       
-    * NATS Server is a simple, high performance open source messaging system for cloud native applications, IoT messaging, and microservices architectures.
-    * **License -** Apache 2.0
-* **Nameko Microservices**   
-    * Nameko is a framework for building microservices in Python.
-    * **License -** Apache 2.0
+| Dependency       | Description          | License  |
+| ------------- |:-------------:| -----:|
+| `Bootstrap 3` |open-source CSS framework directed at responsive, mobile-first development | MIT |
+| `JQuery`      | to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.| MIT |
+| `Font Awesome` | font and icon toolkit based on CSS and LESS.      | MIT |
+| `AngularJS` |JavaScript-based open-source front-end web framework helps in developing single-page applications | MIT |
+| `D3 JS `    | library for producing dynamic, interactive data visualizations in web browsers | BSD |
+| `Yaml Editor` | implementation of YAML, a human-friendly data serialization language | MIT |
+| `Contextual Menu` |menu in a graphical user interface that appears upon user interaction | MIT |
+| `Footable JS`     | responsive table plugin built on jQuery | MIT |
+| `Gauge JS` | plugin for generating and animating nice & clean dashboard gauges | MIT |
+| `Charts JS` | Simple, clean and engaging HTML5 based JavaScript charts | MIT |
+| `FastClick JS` | library for eliminating the 300ms delay between a physical tap and the firing of a click event on mobile browsers | MIT |
+| `Bootbox` | plugin for creating alert, confirm and flexible dialog boxes | MIT |
+| `JQV Maps` | plugin that renders Interactive, Clickable Vector Maps | MIT OR GPL-3.0 |
+| `JS Tree`  | plugin that provides interactive tree structure | MIT |
+| `Flowchart JS` | enables you to create drag'n'drop flowchart boxes and connect between them with a custom line. | MIT |
+| `Neo4j Graphs` | graph visualization and analysis platform. It connects directly to Neo4j's graph database technology | MIT |
+| `Elastic search` | highly-scalable document storage engine that specializes in search | Apache 2.0 |
+| `Python 3` | interpreted, high-level, general-purpose programming language used on a server to create web applications | Python Software Foundation License (PSFL) is a BSD-style, permissive free software license which is compatible with the GNU General Public License (GPL) |
+| `Pip 3` | package manager for Python packages, or modules |  |
+| `Nginx` | web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache | 2-clause BSD |
+| `Nats messaging system` | high performance open source messaging system for cloud native applications, IoT messaging, and microservices architectures | Apache 2.0 |
+| `Nameko Microservices` | framework for building microservices in Python | Apache 2.0 |
