@@ -1,6 +1,6 @@
 ## Monitor with Alarms
 
-![Audit Monitoring](./documentation/images/alarms.png)
+![Audit Monitoring](./images/alarms.png)
 
 1) Compliance Audits can be tailor-made from templates in YAML   
 2) Audits can be triggered on Cloud Nodes manually   
