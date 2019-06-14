@@ -4,8 +4,8 @@ SCF enables goal-based visibility into changes in security control configuration
 * Tracking real-time compliance—such as CIS, GDPR—posture impacted by security control configuration    
 * Application workload behavior posture tracking  
 
-## Component Architecture
-![Component Architecture](./documentation/images/scf_component.jpg)
+## Functional Architecture
+![Functional Architecture](./documentation/images/scf_component.jpg)
 
 ## Compliance Real-time Impact on Securit Posture (CRISP) 
 * Define security goals and their relationship with security control configurations in different asset    
