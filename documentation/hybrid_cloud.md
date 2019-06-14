@@ -1,4 +1,4 @@
-## Security Policy Templates
+## Security Policy Templates for Hybrid Cloud environments (AWS and Kubernetes)
 
 ![Cloud Deployments](./images/cloud_dep.png)
 
