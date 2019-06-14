@@ -1,6 +1,6 @@
 ## Security across Hybrid Cloud Deployments
 
-![Cloud Deployments](./documentation/images/cloud_dep.png)
+![Cloud Deployments](./images/cloud_dep.png)
 
 1) SCF-SCRM gives a view of deployments and security setup across multiple Hybrid Clouds   
 2) Security Policies can be configured as templates, which are attached as instances to workloads   
