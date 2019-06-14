@@ -1,5 +1,5 @@
 ## Create Security Goals as a Posture in SCF
-![Security Goals](./documentation/images/security_goals.png)
+![Security Goals](./images/security_goals.png)
 
 1) Create a Security Posture based on your Security Goals   
 2) Map these goals on Asset Groups   
