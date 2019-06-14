@@ -25,10 +25,12 @@ SCF enables goal-based visibility into changes in security control configuration
 2) Run the shell script installer.sh from SCF folder 
     `./installer.sh`
     This will download and install all 3rd party components.
-    It will then create the daemons and rin the SCF micro-services
+    It will then create the daemons and run the SCF micro-services
+    
 ## Accessing the SCF UI
 If all goes well, then the SCF UI will be accessible on `https://<IP-address>/`
-Note : The initial commit does not support RBAC, you can used the following default credential to login :
+Note : The initial commit does not support RBAC, you can used the following default credential to login -
+
 `
 user-name : scf@aricent.com
 password : scfadmin
