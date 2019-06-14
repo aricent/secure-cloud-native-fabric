@@ -19,11 +19,18 @@ SCF enables goal-based visibility into changes in security control configuration
 
 ## Installation    
 
-**Prerequisite** Application setup should be run on Linux.
+**Prerequisite** SCF currently installs on Ubuntu 16.04.
 
 1) Clone the repository   
-2) Run the shell script from SCF folder to download all the dependencies required to make this application run 
-    ./installer.sh 
+2) Run the shell script installer.sh from SCF folder 
+    `./installer.sh`
+    This will download and install all 3rd party components.
+    It will then create the daemons and rin the SCF micro-services
+## Accessing the SCF UI
+If all goes well, then the SCF UI will be accessible on https://<IP-address>/
+Note : The initial commit does not support RBAC, you can used the following default credential to login :
+user-name : scf@aricent.com
+password : scfadmin
 
 ## Use cases   
 
