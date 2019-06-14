@@ -1,4 +1,3 @@
-# secure-cloud-native-fabric
 # SCF - Secure Cloud Native Fabric
 SCF enables goal-based visibility into changes in security control configurations that implement regulatory compliance requirements as well as organizational security policies so that appropriate action can be taken in real-time. Capabilities enabled by SCF include:   
 * Security configuration posture tracking of Kubernetes container orchestrator and multi-cloud infrastructure    
