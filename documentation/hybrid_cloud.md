@@ -1,4 +1,4 @@
-## Security across Hybrid Cloud Deployments
+## Security Policy Templates
 
 ![Cloud Deployments](./images/cloud_dep.png)
 
