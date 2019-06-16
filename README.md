@@ -18,15 +18,18 @@ SCF enables goal-based visibility into changes in security control configuration
 * Holistic small-unit visibility and workload identity based zero-trust communication model    
 
 ## Installation    
-
-**Prerequisite** SCF currently installs on Ubuntu 16.04.
+### Installing SCF
+**Prerequisite** SCF currently installs on Ubuntu 16.04 LTS.
 
 1) Clone the repository   
 2) Run the shell script installer.sh from SCF folder 
     `./installer.sh`
     This will download and install all 3rd party components.
     It will then create the daemons and run the SCF micro-services
-    
+### Installing the SCF Agent
+The SCF Agent will run as a daemon-process on your cloud-host (Ubuntu 16.04 LTS).
+**We will be adding a simple CLI script for building the SCF-Agent.**
+
 ## Accessing the SCF UI
 If all goes well, then the SCF UI will be accessible on `https://<IP-address>/`
 
