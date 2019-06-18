@@ -1,5 +1,6 @@
 # SCF - Secure Cloud Native Fabric
-https://travis-ci.com/aricent/secure-cloud-native-fabric.svg?branch=master
+[![Build Status](https://travis-ci.com/aricent/secure-cloud-native-fabric.svg?branch=master)](https://travis-ci.com/aricent/secure-cloud-native-fabric)
+
 SCF is like a security orchestrator which involves interweaving processes and technology in the most effective manner to strengthen the security posture of an organization.
 The Security-Posture should be applicable to different cloud infrastructure types – OpenStack, Kubernetes, Docker. It would however also have specific policies and audit-rules for specific cloud-types.
 The essential elements of a security posture are :
