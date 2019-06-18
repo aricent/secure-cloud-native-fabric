@@ -364,7 +364,7 @@ def search_index_using_querystring(index, query_dict):
 """---Main ti Test!! ---"""
 if __name__== "__main__":
 
-    #f = open("/home/ubuntu/amrita/git_code/SCF/SCRM/util/auditor.json", "r") 
+    #f = open("/home/ubuntu/test/git_code/SCF/SCRM/util/auditor.json", "r") 
     #print(f.read())
     #data = json.loads(f.read())
     #res = post_request('auditors', json.dumps(data), 'AAA')
@@ -383,7 +383,7 @@ if __name__== "__main__":
     print(response)"""
     #rep = get_count_for_index('policies')
     #get_all_documents('policies', { "timestamp": "desc"})
-    #uery_dict = {"GroupName" : "Amrita-Sec-Grp", "VpcId" : "vpc-0f31d867"}
+    #uery_dict = {"GroupName" : "test-Sec-Grp", "VpcId" : "vpc-0f31d867"}
     #et_search_results('policies', query_dict)
     """body = { "ingressRules": { "Old_IpPermissions": [      
     ],
@@ -475,9 +475,9 @@ if __name__== "__main__":
     index = 'falco'
     result = create_index_with_properties(index, properties)'''
 
-    query_dict = {"name" : "kirti AND goel AND 1"}
+    query_dict = {"name" : "test AND scf AND 1"}
     result = search_index_using_querystring('temp', query_dict)
-    #result = get_document_by_id('temp', "kirti%2Fgoel")
+    #result = get_document_by_id('temp', "test%2Fscf")
     print(result)
  
     

@@ -362,7 +362,7 @@ if __name__ == '__main__':
     ob = AuditorService()
     ob.loadAuditorTypeRegistry(request)
     print(Auditor.AuditorTypeRegistry)"""
-    f = open("/home/ubuntu/amrita/git_code/SCF/SCRM/audit/K8S.Falco/default.yaml", "r")
+    f = open("/home/ubuntu/SCF/SCRM/audit/K8S.Falco/default.yaml", "r")
     #print(f.read())
     file_object = yaml.load(f, Loader=yaml.FullLoader)
     print(file_object)
