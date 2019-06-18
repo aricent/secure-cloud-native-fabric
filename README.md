@@ -2,10 +2,11 @@
 SCF is like a security orchestrator which involves interweaving processes and technology in the most effective manner to strengthen the security posture of an organization.
 The Security-Posture should be applicable to different cloud infrastructure types – OpenStack, Kubernetes, Docker. It would however also have specific policies and audit-rules for specific cloud-types.
 The essential elements of a security posture are :
-1.      **Security Requirements** : These can be Compliance Requirements like CIS, GDPR, PCI-DSS e.t.c.
-2.      **Asset Groups / Categories** : These are the different asset-types that you would like to secure, for example a Kubernetes Cluster, OpenStack Nodes etc.
-3.      **Security Controls** : The type of Security Controls you would like to impose, for example Network-Security, Runtime / Behavioral Security, Image Vulnerability etc.
-4.      **Auditors** : These are auditor-types which will be associated with Security-Controls to check if the Security Control is effective.
+<br>
+1.**Security Requirements** : These can be Compliance Requirements like CIS, GDPR, PCI-DSS e.t.c.
+2.**Asset Groups / Categories** : These are the different asset-types that you would like to secure, for example a Kubernetes Cluster, OpenStack Nodes etc.
+3.**Security Controls** : The type of Security Controls you would like to impose, for example Network-Security, Runtime / Behavioral Security, Image Vulnerability etc.
+4.**Auditors** : These are auditor-types which will be associated with Security-Controls to check if the Security Control is effective.
 
 SCF sits alongside the Cloud PaaS and integrates with the Cloud Orchestrator to provide security monitoring and configuration services.
 Capabilities enabled by SCF include:
@@ -111,5 +112,6 @@ The following third-party libaries have been used in SCF :
 | Falco | Framework for intrusion and abnormality detection for Cloud Native platforms such as Kubernetes | Apache 2.0 |
 | Neo4j Database | Graph database management system developed by Neo4j |  GPLv3 and AGPLv3 |
 | Kube-bench | An infrastructure configuration scanner that automates checking your Kubernetes configuration against the CIS benchmark for Kubernetes  | Apache 2.0 |
+| Neomodel | Python ORM-like library for Neo4j |  MIT |
 
 
