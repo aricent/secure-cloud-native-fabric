@@ -1,6 +1,5 @@
 #!/bin/bash
 SOFTWARE_LIST="python3;python3-pip;rabbitmq-server;rsync;nginx;supervisor;neo4j=1:3.4.0;elasticsearch=6.6.1;npm"
-PYTHON_PKG="elasticsearch==6.3.1;asyncio-nats-client;SQLAlchemy;boto3;django==1.11.7;djangorestframework;Markdown;django-filter;django-cors-headers;coreapi;django-rest-swagger;nameko;configparser;gunicorn;kubernetes;neomodel;neo4jrestclient"
 
 printf "\nInstalling neo4j..\n"
 wget -O - https://debian.neo4j.org/neotechnology.gpg.key | apt-key add -
@@ -69,20 +68,10 @@ if [[ "$tmp1" =~ "$tmp2" ]]; then
    printf "\n ERROR : Virtual environment already active, please exit and install"
 else
     source scrm_venv/bin/activate
-    #printf $SOFTWARE_LIST
     printf "\n Installing required Python packages from  list ...\n"
     #install python packages
- 
-    IFS=';' list=($PYTHON_PKG)
-    for item in "${list[@]}"; do 
-        flag=`pip3 list | grep $item |awk '{print $1}'`
-        if [ ! $flag ]
-        then
-            pip3 install --trusted-host pypi.org --trusted-host files.pythonhosted.org $item
-	    printf "\n$item python item installed\n"
-#           apt-get -y install python3-pip
-        fi
-    done
+    pip3 install -r requirements.txt    
+
     cd $PROJ_ROOT_PATH/SCRM
     rm -rf *.db
     printf "\nInstalling Migrations ...\n"
