@@ -1,11 +1,4 @@
 dist: xenial
-#language: python
-#python:
-#  - "3.5.2"
-# command to install dependencies
-install:
-  - cd secure-cloud-native-fabric
-  - sudo sh install.sh
-# command to run tests
-#script:
-#  - pytest
+deploy:
+  provider: script
+  script: bash install.sh
