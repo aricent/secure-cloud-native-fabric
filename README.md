@@ -2,15 +2,11 @@
 SCF is like a security orchestrator which involves interweaving processes and technology in the most effective manner to strengthen the security posture of an organization.
 The Security-Posture should be applicable to different cloud infrastructure types – OpenStack, Kubernetes, Docker. It would however also have specific policies and audit-rules for specific cloud-types.
 The essential elements of a security posture are :
-<br/><br/>
-1.  **Security Requirements** : These can be Compliance Requirements like CIS, GDPR, PCI-DSS etc
-<br/><br/>
-2.  **Asset Groups / Categories** : These are the different asset-types that you would like to secure, for example a Kubernetes Cluster, OpenStack Nodes etc.
-<br/><br/>
-3.  **Security Controls** : The type of Security Controls you would like to impose, for example Network-Security, Runtime / Behavioral Security, Image Vulnerability etc.
-<br/><br/>
-4.  **Auditors** : These are auditor-types which will be associated with Security-Controls to check if the Security Control is effective.
-<br/>
+
+1. **Security Requirements** : These can be Compliance Requirements like CIS, GDPR, PCI-DSS etc.        
+2. **Asset Groups / Categories** : These are the different asset-types that you would like to secure, for example a Kubernetes Cluster, OpenStack Nodes etc.    
+3. **Security Controls** : The type of Security Controls you would like to impose, for example Network-Security, Runtime / Behavioral Security, Image Vulnerability etc.    
+4. **Auditors** : These are auditor-types which will be associated with Security-Controls to check if the Security Control is effective.    
 
 SCF sits alongside the Cloud PaaS and integrates with the Cloud Orchestrator to provide security monitoring and configuration services.
 Capabilities enabled by SCF include:
@@ -29,30 +25,28 @@ Capabilities enabled by SCF include:
 * Holistic small-unit visibility and workload identity based zero-trust communication model    
 
 ## Installation    
-### Installing SCF
+
+#### Installing SCF    
 **Prerequisite** SCF currently installs on Ubuntu 16.04 LTS.
 
 1) Clone the repository   
 2) Run the shell script installer.sh from SCF folder 
-    `./installer.sh`
-    This will download and install all 3rd party components.
-    It will then create the daemons and run the SCF micro-services
-### Installing the SCF Agent
-The SCF Agent will run as a daemon-process on your cloud-host (Ubuntu 16.04 LTS).
-<br>
+    `./installer.sh`    
+    This will download and install all 3rd party components. It will then create the daemons and run the SCF micro-services.    
+
+#### Installing the SCF Agent
+The SCF Agent will run as a daemon-process on your cloud-host (Ubuntu 16.04 LTS).    
 **We will be adding a simple CLI script for building the SCF-Agent.**
 
 ## Accessing the SCF UI
 If all goes well, then the SCF UI will be accessible on `https://<IP-address>/`
 
-**Note** : 
-- The initial commit does not support RBAC, you can used the following default credential to login
-
-    user-name : scf@aricent.com <br>
-    password : scfadmin
-
-- This is an initial commit, we will be adding more documentation on how to add a Kubernetes Cluster or AWS Cloud to SCF for monitoring
-- We will be adding the SCF-Agent builder as the next step
+**Note** :    
+* The initial commit does not support RBAC, you can used the following default credential to login    
+    `user-name : scf@aricent.com`        
+    `password : scfadmin`       
+* This is an initial commit, we will be adding more documentation on how to add a Kubernetes Cluster or AWS Cloud to SCF for monitoring    
+* We will be adding the SCF-Agent builder as the next step
 
 ## Use cases   
 
@@ -117,5 +111,3 @@ The following third-party libaries have been used in SCF :
 | Neo4j Database | Graph database management system developed by Neo4j |  GPLv3 and AGPLv3 |
 | Kube-bench | An infrastructure configuration scanner that automates checking your Kubernetes configuration against the CIS benchmark for Kubernetes  | Apache 2.0 |
 | Neomodel | Python ORM-like library for Neo4j |  MIT |
-
-
