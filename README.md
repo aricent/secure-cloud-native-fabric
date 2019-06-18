@@ -36,10 +36,9 @@ If all goes well, then the SCF UI will be accessible on `https://<IP-address>/`
 **Note** : 
 - The initial commit does not support RBAC, you can used the following default credential to login
 
-`
-user-name : scf@aricent.com
+user-name : scf@aricent.com <br>
 password : scfadmin
-`
+
 - This is an initial commit, we will be adding more documentation on how to add a Kubernetes Cluster or AWS Cloud to SCF for monitoring
 - We will be adding the SCF-Agent builder as the next step
 
