@@ -2,11 +2,15 @@
 SCF is like a security orchestrator which involves interweaving processes and technology in the most effective manner to strengthen the security posture of an organization.
 The Security-Posture should be applicable to different cloud infrastructure types – OpenStack, Kubernetes, Docker. It would however also have specific policies and audit-rules for specific cloud-types.
 The essential elements of a security posture are :
-<br>
+<br/>
 1.**Security Requirements** : These can be Compliance Requirements like CIS, GDPR, PCI-DSS e.t.c.
+<br/>
 2.**Asset Groups / Categories** : These are the different asset-types that you would like to secure, for example a Kubernetes Cluster, OpenStack Nodes etc.
+<br/>
 3.**Security Controls** : The type of Security Controls you would like to impose, for example Network-Security, Runtime / Behavioral Security, Image Vulnerability etc.
+<br/>
 4.**Auditors** : These are auditor-types which will be associated with Security-Controls to check if the Security Control is effective.
+<br/>
 
 SCF sits alongside the Cloud PaaS and integrates with the Cloud Orchestrator to provide security monitoring and configuration services.
 Capabilities enabled by SCF include:
