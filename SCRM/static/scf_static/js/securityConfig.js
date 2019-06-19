@@ -246,70 +246,70 @@ var policyCrud = {
 	},
 	deleteTemplate: function (ind) {
 		var grpID = tempTable.find('tbody tr').eq(ind).attr('data-id');
-		// bootbox.dialog({
-		// 	message: "<img class='boot-img' src='../static/scf_static/images/question_mark.png'><p class='boot-para'>Are you sure you want to delete the template?</p>",
-		// 	buttons: {
-		// 		confirm: {
-		// 			label: 'Yes',
-		// 			className: 'btn-success',
-		// 			callback: function () {
-		// 				$.ajax({
-		// 					url: "/policytemplates/?id=" + grpID,
-		// 					type: 'DELETE',
-		// 					cache: false,
-		// 					async: false,
-		// 					success: function (data) {
-		// 						setTimeout(function () {
-		// 							policyCrud.populateAllTemplates();
-		// 						}, 800);
-		// 					},
-		// 					error: function () {
-		// 					}
-		// 				});
-		// 			}
-		// 		},
-		// 		cancel: {
-		// 			label: 'No',
-		// 			className: 'btn-danger',
-		// 			callback: function () {
-		// 			}
-		// 		}
-		// 	}
-		// });
+		if (grpID != undefined) {
+			swal({
+				title: "",
+				text: "Are you sure you want to delete the template?",
+				icon: "warning",
+				buttons: true,
+				dangerMode: true,
+				showCancelButton: true,
+				closeOnConfirm: true,
+				confirmButtonText: "Yes"
+			})
+				.then(function (willDelete) {
+					if (willDelete) {
+						$.ajax({
+							url: "/policytemplates/?id=" + grpID,
+							type: 'DELETE',
+							cache: false,
+							async: false,
+							success: function (data) {
+								setTimeout(function () {
+									policyCrud.populateAllTemplates();
+								}, 800);
+							},
+							error: function () {
+							}
+						});
+
+					}
+				});
+		}
 	},
 
 	deletePolicy: function (ind) {
 		var grpID = parentPolicy.find('tbody tr').eq(ind).attr('data-id');
-		// bootbox.dialog({
-		// 	message: "<img class='boot-img' src='../static/scf_static/images/question_mark.png'><p class='boot-para'>Are you sure you want to delete the groupID:'" + grpID + "'?</p>",
-		// 	buttons: {
-		// 		confirm: {
-		// 			label: 'Yes',
-		// 			className: 'btn-success',
-		// 			callback: function () {
-		// 				$.ajax({
-		// 					url: "/policyinstances/?policyId=" + grpID,
-		// 					type: 'DELETE',
-		// 					cache: false,
-		// 					async: false,
-		// 					success: function (data) {
-		// 						setTimeout(function () {
-		// 							policyCrud.populateAllPolicies();
-		// 						}, 800);
-		// 					},
-		// 					error: function () {
-		// 					}
-		// 				});
-		// 			}
-		// 		},
-		// 		cancel: {
-		// 			label: 'No',
-		// 			className: 'btn-danger',
-		// 			callback: function () {
-		// 			}
-		// 		}
-		// 	}
-		// });
+		if (grpID != undefined) {
+			swal({
+				title: "",
+				text: "Are you sure you want to delete the groupID:'" + grpID + "'?",
+				icon: "warning",
+				buttons: true,
+				dangerMode: true,
+				showCancelButton: true,
+				closeOnConfirm: true,
+				confirmButtonText: "Yes"
+			})
+				.then(function (willDelete) {
+					if (willDelete) {
+						$.ajax({
+							url: "/policyinstances/?policyId=" + grpID,
+							type: 'DELETE',
+							cache: false,
+							async: false,
+							success: function (data) {
+								setTimeout(function () {
+									policyCrud.populateAllPolicies();
+								}, 800);
+							},
+							error: function () {
+							}
+						});
+
+					}
+				});
+		}
 	},
 	handleCloud: function (sel) {
 		source.setValue('');
