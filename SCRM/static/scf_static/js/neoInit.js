@@ -247,13 +247,25 @@ function podActions(podName, alarmTxt, action) {
     data: { "objectName": podName, "alarmText": alarmTxt },
     success: function (data) {
       calNeo4jGraph(cloudSel, '#neo4jd3');
-      bootbox.alert({
-        message: '<img class="boot-img" src="../static/scf_static/images/CheckMark.png" /><div class="boot-para">Action has been completed successfully on Pod "' + podName + '" .</div>'
+      // bootbox.alert({
+      //   message: '<img class="boot-img" src="../static/scf_static/images/CheckMark.png" /><div class="boot-para">Action has been completed successfully on Pod "' + podName + '" .</div>'
+      // });
+      swal({
+        title: "",
+        text: "Action has been completed successfully on Pod '" + podName + "' .",
+        icon: "success",
+        button: "Ok",
       });
     },
     error: function (xhr) {
-      bootbox.alert({
-        message: '<img class="boot-img" src="../static/scf_static/images/error_img.png" /><div class="boot-para">Action has not been completed successfully on Pod "' + podName + '" .</div>'
+      // bootbox.alert({
+      //   message: '<img class="boot-img" src="../static/scf_static/images/error_img.png" /><div class="boot-para">Action has not been completed successfully on Pod "' + podName + '" .</div>'
+      // });
+      swal({
+        title: "",
+        text: "Action has not been completed successfully on Pod '" + podName + "' .",
+        icon: "error",
+        button: "Ok",
       });
     }
   });

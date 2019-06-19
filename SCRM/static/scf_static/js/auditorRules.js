@@ -114,8 +114,14 @@ function populateSelectedAuditors(auditType) {
             source.setValue(data);
         },
         error: function (msg) {
-            bootbox.alert({
-                message: '<img class="boot-img" src="../static/scf_static/images/error_img.png"><p class="boot-para">' + msg.responseJSON.message + '<p>'
+            // bootbox.alert({
+            //     message: '<img class="boot-img" src="../static/scf_static/images/error_img.png"><p class="boot-para">' + msg.responseJSON.message + '<p>'
+            // });
+            swal({
+                title: "",
+                text: "" + msg.responseJSON.message,
+                icon: "error",
+                button: "Ok",
             });
         }
     });
@@ -175,8 +181,14 @@ function createAuditor() {
             'posturename': $('.postureList').val() != undefined ? $('.postureList').val() : $('#step-3 .MultiCarousel-inner .item.selected').text().trim()
         },
         success: function (data) {
-            bootbox.alert({
-                message: '<img class="boot-img" src="../static/scf_static/images/CheckMark.png"><p class="boot-para">Auditor instance has been created successfully.<br/>You can <strong>Run</strong> the auditor from CRISP.<p>'
+            // bootbox.alert({
+            //     message: '<img class="boot-img" src="../static/scf_static/images/CheckMark.png"><p class="boot-para">Auditor instance has been created successfully.<br/>You can <strong>Run</strong> the auditor from CRISP.<p>'
+            // });
+            swal({
+                title: "",
+                text: "Auditor instance has been created successfully.You can start the auditor from CRISP.",
+                icon: "success",
+                button: "Ok",
             });
             calNeo4jGraph('KUBERNETES', '#neo4jd3');
             $('#auditorModal').modal('hide');
@@ -187,8 +199,14 @@ function createAuditor() {
         },
         error: function (msg) {
             // console.log(JSON.stringify(msg));
-            bootbox.alert({
-                message: '<img class="boot-img" src="../static/scf_static/images/error_img.png"><p class="boot-para">' + JSON.parse(msg.responseText).reason + '<p>'
+            // bootbox.alert({
+            //     message: '<img class="boot-img" src="../static/scf_static/images/error_img.png"><p class="boot-para">' + JSON.parse(msg.responseText).reason + '<p>'
+            // });
+            swal({
+                title: "",
+                text: "" + JSON.parse(msg.responseText).reason,
+                icon: "error",
+                button: "Ok",
             });
         }
     });

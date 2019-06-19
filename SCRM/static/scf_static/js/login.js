@@ -19,9 +19,15 @@
 				// modal.find('.modal-body').html("Please provide valid email/password");
 				// console.log("Error: Data", e.statusText);
 				// $('#demoModal').modal('show');
-				bootbox.alert({
-					message: '<img class="boot-img" src="../static/scf_static/images/error_img.png"><p class="boot-para">Please provide valid email/password<p>',
-					size: 'small'
+				// bootbox.alert({
+				// 	message: '<img class="boot-img" src="../static/scf_static/images/error_img.png"><p class="boot-para">Please provide valid email/password<p>',
+				// 	size: 'small'
+				// });
+				swal({
+					title: "",
+					text: "Please provide valid email/password.",
+					icon: "error",
+					button: "Ok",
 				});
 			}
 		});

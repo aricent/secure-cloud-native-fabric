@@ -85,9 +85,15 @@ $(document).ready(function () {
 			saveFlowChart();
 		}
 		else if (Object.keys($("#tabs-3").flowchart("getData")['operators']).length == 0) {
-			bootbox.alert({
-				message: '<img class="boot-img" src="../static/scf_static/images/error_img.png" /><p class="boot-para">Please define the baseline.</p>',
-				size: 'small'
+			// bootbox.alert({
+			// 	message: '<img class="boot-img" src="../static/scf_static/images/error_img.png" /><p class="boot-para">Please define the baseline.</p>',
+			// 	size: 'small'
+			// });
+			swal({
+				title: "",
+				text: "Please define the baseline.",
+				icon: "error",
+				button: "Ok",
 			});
 		}
 		else {
@@ -398,8 +404,14 @@ function saveFlowChart() {
 		contentType: 'application/json',
 		data: JSON.stringify({ "posturename": postureName, "orgname": "Aricent", "jsondoc": data }),
 		success: function (res) {
-			bootbox.alert({
-				'message': '<img class="boot-img" src="../static/scf_static/images/CheckMark.png" /><p class="boot-para">Goal Baseline has been saved successfully.</p>'
+			// bootbox.alert({
+			// 	'message': '<img class="boot-img" src="../static/scf_static/images/CheckMark.png" /><p class="boot-para">Goal Baseline has been saved successfully.</p>'
+			// });
+			swal({
+				title: "",
+				text: "Goal Baseline has been saved successfully.",
+				icon: "success",
+				button: "Ok",
 			});
 		},
 		error: function (xhr) {
@@ -518,9 +530,15 @@ function ajaxTreeClicked(obj, node) {
 		count++;
 		var comp_id = node.id + '-' + count;
 		if ($('#tabs-3').flowchart('getData').operators[comp_id] != undefined) {
-			bootbox.alert({
-				message: '<img class="boot-img" src="../static/scf_static/images/error_img.png"><p class="boot-para">"' + node.text + '" node of Node ID: ' + comp_id + ' already exists.<p>',
-				size: 'small'
+			// bootbox.alert({
+			// 	message: '<img class="boot-img" src="../static/scf_static/images/error_img.png"><p class="boot-para">"' + node.text + '" node of Node ID: ' + comp_id + ' already exists.<p>',
+			// 	size: 'small'
+			// });
+			swal({
+				title: "",
+				text: "'" + node.text + " ' node of Node ID: '" + comp_id + " 'already exists. ",
+				icon: "error",
+				button: "Ok",
 			});
 		}
 		else {
@@ -665,8 +683,14 @@ function populateSelectedConfig(tempName) {
 				populateNamespace();
 			},
 			error: function (msg) {
-				bootbox.alert({
-					message: '<img class="boot-img" src="../static/scf_static/images/error_img.png" /><div class="boot-para">' + JSON.parse(msg.responseText).reason + '" </div>'
+				// bootbox.alert({
+				// 	message: '<img class="boot-img" src="../static/scf_static/images/error_img.png" /><div class="boot-para">' + JSON.parse(msg.responseText).reason + '" </div>'
+				// });
+				swal({
+					title: "",
+					text: "" + JSON.parse(msg.responseText).reason,
+					icon: "error",
+					button: "Ok",
 				});
 			}
 		});
@@ -688,8 +712,14 @@ function populateNamespace() {
 			$('#namespace').empty().html(optionHtml);
 		},
 		error: function (msg) {
-			bootbox.alert({
-				message: '<img class="boot-img" src="../static/scf_static/images/error_img.png" /><div class="boot-para">' + JSON.parse(msg.responseText).reason + '" </div>'
+			// bootbox.alert({
+			// 	message: '<img class="boot-img" src="../static/scf_static/images/error_img.png" /><div class="boot-para">' + JSON.parse(msg.responseText).reason + '" </div>'
+			// });
+			swal({
+				title: "",
+				text: "" + JSON.parse(msg.responseText).reason,
+				icon: "error",
+				button: "Ok",
 			});
 		}
 	});
@@ -739,9 +769,15 @@ function createPolicyInstance() {
 		data: JSON.stringify(dataString),
 		contentType: 'application/json',
 		success: function (data) {
-			bootbox.alert({
-				message: '<img class="boot-img" src="../static/scf_static/images/CheckMark.png" /><div class="boot-para">The policy has been ' + action + 'ed successfully.</div>',
-				size: 'small'
+			// bootbox.alert({
+			// 	message: '<img class="boot-img" src="../static/scf_static/images/CheckMark.png" /><div class="boot-para">The policy has been ' + action + 'ed successfully.</div>',
+			// 	size: 'small'
+			// });
+			swal({
+				title: "",
+				text: 'The policy has been ' + action + 'ed successfully.',
+				icon: "success",
+				button: "Ok",
 			});
 		},
 		error: function (xhr) {
@@ -752,8 +788,14 @@ function createPolicyInstance() {
 					msg += '<p><strong>' + ind + '</strong> : ' + val + '</p>';
 				});
 			});
-			bootbox.alert({
-				message: '<img class="boot-img" src="../static/scf_static/images/error_img.png" /><div class="boot-para">' + msg + '</div>'
+			// bootbox.alert({
+			// 	message: '<img class="boot-img" src="../static/scf_static/images/error_img.png" /><div class="boot-para">' + msg + '</div>'
+			// });
+			swal({
+				title: "",
+				text: '' + msg,
+				icon: "error",
+				button: "Ok",
 			});
 		}
 	});

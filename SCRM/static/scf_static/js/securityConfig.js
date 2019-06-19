@@ -103,8 +103,14 @@ var policyCrud = {
 			dataType: datatype,
 			success: function (data) {
 				//data = JSON.parse(data);
-				bootbox.alert({
-					message: '<img class="boot-img" src="../static/scf_static/images/CheckMark.png" /><div class="boot-para">The policy has been ' + action + 'ed successfully.</div>'
+				// bootbox.alert({
+				// 	message: '<img class="boot-img" src="../static/scf_static/images/CheckMark.png" /><div class="boot-para">The policy has been ' + action + 'ed successfully.</div>'
+				// });
+				swal({
+					title: "",
+					text: "The policy has been " + action + "ed successfully.",
+					icon: "success",
+					button: "Ok",
 				});
 
 				setTimeout(function () {
@@ -119,8 +125,14 @@ var policyCrud = {
 						msg += '<p><strong>' + ind + '</strong> : ' + val + '</p>';
 					});
 				});
-				bootbox.alert({
-					message: '<img class="boot-img" src="../static/scf_static/images/error_img.png" /><div class="boot-para">' + msg + '</div>'
+				// bootbox.alert({
+				// 	message: '<img class="boot-img" src="../static/scf_static/images/error_img.png" /><div class="boot-para">' + msg + '</div>'
+				// });
+				swal({
+					title: "",
+					text: "" + msg,
+					icon: "error",
+					button: "Ok",
 				});
 			}
 		});
@@ -144,8 +156,14 @@ var policyCrud = {
 				async: false,
 				data: dataString,
 				success: function (data) {
-					bootbox.alert({
-						message: '<img class="boot-img" src="../static/scf_static/images/CheckMark.png" /><div class="boot-para">The policy has been ' + action + 'ed successfully.</div>'
+					// bootbox.alert({
+					// 	message: '<img class="boot-img" src="../static/scf_static/images/CheckMark.png" /><div class="boot-para">The policy has been ' + action + 'ed successfully.</div>'
+					// });
+					swal({
+						title: "",
+						text: "The policy has been " + action + "ed successfully.",
+						icon: "success",
+						button: "Ok",
 					});
 
 					setTimeout(function () {
@@ -160,8 +178,14 @@ var policyCrud = {
 							msg += '<p><strong>' + ind + '</strong> : ' + val + '</p>';
 						});
 					});
-					bootbox.alert({
-						message: '<img class="boot-img" src="../static/scf_static/images/error_img.png" /><div class="boot-para">' + msg + '</div>'
+					// bootbox.alert({
+					// 	message: '<img class="boot-img" src="../static/scf_static/images/error_img.png" /><div class="boot-para">' + msg + '</div>'
+					// });
+					swal({
+						title: "",
+						text: "" + msg,
+						icon: "error",
+						button: "Ok",
 					});
 				}
 			});
@@ -222,70 +246,70 @@ var policyCrud = {
 	},
 	deleteTemplate: function (ind) {
 		var grpID = tempTable.find('tbody tr').eq(ind).attr('data-id');
-		bootbox.dialog({
-			message: "<img class='boot-img' src='../static/scf_static/images/question_mark.png'><p class='boot-para'>Are you sure you want to delete the template?</p>",
-			buttons: {
-				confirm: {
-					label: 'Yes',
-					className: 'btn-success',
-					callback: function () {
-						$.ajax({
-							url: "/policytemplates/?id=" + grpID,
-							type: 'DELETE',
-							cache: false,
-							async: false,
-							success: function (data) {
-								setTimeout(function () {
-									policyCrud.populateAllTemplates();
-								}, 800);
-							},
-							error: function () {
-							}
-						});
-					}
-				},
-				cancel: {
-					label: 'No',
-					className: 'btn-danger',
-					callback: function () {
-					}
-				}
-			}
-		});
+		// bootbox.dialog({
+		// 	message: "<img class='boot-img' src='../static/scf_static/images/question_mark.png'><p class='boot-para'>Are you sure you want to delete the template?</p>",
+		// 	buttons: {
+		// 		confirm: {
+		// 			label: 'Yes',
+		// 			className: 'btn-success',
+		// 			callback: function () {
+		// 				$.ajax({
+		// 					url: "/policytemplates/?id=" + grpID,
+		// 					type: 'DELETE',
+		// 					cache: false,
+		// 					async: false,
+		// 					success: function (data) {
+		// 						setTimeout(function () {
+		// 							policyCrud.populateAllTemplates();
+		// 						}, 800);
+		// 					},
+		// 					error: function () {
+		// 					}
+		// 				});
+		// 			}
+		// 		},
+		// 		cancel: {
+		// 			label: 'No',
+		// 			className: 'btn-danger',
+		// 			callback: function () {
+		// 			}
+		// 		}
+		// 	}
+		// });
 	},
 
 	deletePolicy: function (ind) {
 		var grpID = parentPolicy.find('tbody tr').eq(ind).attr('data-id');
-		bootbox.dialog({
-			message: "<img class='boot-img' src='../static/scf_static/images/question_mark.png'><p class='boot-para'>Are you sure you want to delete the groupID:'" + grpID + "'?</p>",
-			buttons: {
-				confirm: {
-					label: 'Yes',
-					className: 'btn-success',
-					callback: function () {
-						$.ajax({
-							url: "/policyinstances/?policyId=" + grpID,
-							type: 'DELETE',
-							cache: false,
-							async: false,
-							success: function (data) {
-								setTimeout(function () {
-									policyCrud.populateAllPolicies();
-								}, 800);
-							},
-							error: function () {
-							}
-						});
-					}
-				},
-				cancel: {
-					label: 'No',
-					className: 'btn-danger',
-					callback: function () {
-					}
-				}
-			}
-		});
+		// bootbox.dialog({
+		// 	message: "<img class='boot-img' src='../static/scf_static/images/question_mark.png'><p class='boot-para'>Are you sure you want to delete the groupID:'" + grpID + "'?</p>",
+		// 	buttons: {
+		// 		confirm: {
+		// 			label: 'Yes',
+		// 			className: 'btn-success',
+		// 			callback: function () {
+		// 				$.ajax({
+		// 					url: "/policyinstances/?policyId=" + grpID,
+		// 					type: 'DELETE',
+		// 					cache: false,
+		// 					async: false,
+		// 					success: function (data) {
+		// 						setTimeout(function () {
+		// 							policyCrud.populateAllPolicies();
+		// 						}, 800);
+		// 					},
+		// 					error: function () {
+		// 					}
+		// 				});
+		// 			}
+		// 		},
+		// 		cancel: {
+		// 			label: 'No',
+		// 			className: 'btn-danger',
+		// 			callback: function () {
+		// 			}
+		// 		}
+		// 	}
+		// });
 	},
 	handleCloud: function (sel) {
 		source.setValue('');
