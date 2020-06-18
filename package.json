@@ -10,7 +10,7 @@
     "bootstrap": "3.4.1",
     "fastclick": "1.0.6",
     "@fortawesome/fontawesome-free": "5.7.2",
-    "angular": "1.7.7",
+    "angular": "1.8.0",
     "sweetalert": "2.1.2",
     "neo4jd3": "0.0.5",    
     "jquery.flowchart": "1.1.0",
